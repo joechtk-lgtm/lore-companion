@@ -1,5 +1,10 @@
 import { useState, useRef, useEffect, useCallback } from 'react'
 
+const API_BASE = import.meta.env.VITE_API_URL ||
+  (window.location.hostname === 'localhost'
+    ? 'http://localhost:8000'
+    : `http://${window.location.hostname}:8000`)
+
 const QUOTES = [
   {
     text: 'Evil is evil. Lesser, greater, middling. If I have to choose between one evil and another, I\'d rather not choose at all.',
@@ -215,7 +220,7 @@ export default function AskScreen({ settings, onReset }) {
     setLoading(true)
 
     try {
-      const res = await fetch('http://127.0.0.1:8000/ask', {
+      const res = await fetch(`${API_BASE}/ask`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
