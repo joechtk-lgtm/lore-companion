@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <!-- Background circle (medallion body) -->
+  <circle cx="256" cy="256" r="240" fill="#16130a" stroke="#c9a84c" stroke-width="8"/>
+  <!-- Inner ring -->
+  <circle cx="256" cy="256" r="210" fill="none" stroke="#c9a84c" stroke-width="2" opacity="0.4"/>
+
+  <!-- Wolf head (stylized) -->
+  <!-- Snout -->
+  <path d="M210 310 L240 340 L256 345 L272 340 L302 310 L295 285 L256 295 L217 285 Z" fill="#c9a84c" opacity="0.9"/>
+  <!-- Nose bridge -->
+  <path d="M235 285 L256 280 L277 285 L270 250 L256 245 L242 250 Z" fill="#c9a84c"/>
+  <!-- Forehead -->
+  <path d="M200 255 L220 230 L240 220 L256 218 L272 220 L292 230 L312 255 L300 275 L278 260 L256 265 L234 260 L212 275 Z" fill="#c9a84c"/>
+  <!-- Ears -->
+  <path d="M210 245 L195 195 L235 225 Z" fill="#c9a84c"/>
+  <path d="M302 245 L317 195 L277 225 Z" fill="#c9a84c"/>
+  <!-- Eye left -->
+  <ellipse cx="232" cy="258" rx="8" ry="7" fill="#0e0d0b"/>
+  <ellipse cx="234" cy="256" rx="3" ry="3" fill="#c9a84c" opacity="0.6"/>
+  <!-- Eye right -->
+  <ellipse cx="280" cy="258" rx="8" ry="7" fill="#0e0d0b"/>
+  <ellipse cx="282" cy="256" rx="3" ry="3" fill="#c9a84c" opacity="0.6"/>
+
+  <!-- Decorative runes around border -->
+  <text x="256" y="68" font-family="serif" font-size="14" fill="#c9a84c" opacity="0.5" text-anchor="middle">✦ ✦ ✦</text>
+  <text x="256" y="460" font-family="serif" font-size="14" fill="#c9a84c" opacity="0.5" text-anchor="middle">✦ ✦ ✦</text>
+
+  <!-- Chain link at top -->
+  <circle cx="256" cy="24" r="12" fill="none" stroke="#c9a84c" stroke-width="5"/>
+  <line x1="256" y1="16" x2="256" y2="36" stroke="#c9a84c" stroke-width="5" stroke-linecap="round"/>
+</svg>

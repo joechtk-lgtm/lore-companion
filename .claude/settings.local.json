@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(claude-developer-platform)",
+      "Bash(echo $ANTHROPIC_API_KEY | head -c 20)",
+      "Bash(cd /Users/chayutteeradakorn/lore-companion/backend && python3 -m venv .venv && .venv/bin/pip install -q -r requirements.txt 2>&1 | tail -5)",
+      "Bash(.venv/bin/python -c \"import fastapi, anthropic, uvicorn; print\\('All imports OK'\\)\")",
+      "Bash(printenv | grep ANTHROPIC 2>/dev/null || echo \"not set in env\")",
+      "Bash(echo \"ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY\" > /Users/chayutteeradakorn/lore-companion/backend/.env)",
+      "Bash(curl -s http://localhost:8000/health)",
+      "Bash(curl -s -X POST http://localhost:8000/ask \\\\\n  -H \"Content-Type: application/json\" \\\\\n  -d '{\n    \"universe_id\": \"witcher3\",\n    \"spoiler_tier\": \"velen_novigrad\",\n    \"canon_sources\": [\"game_w3\"],\n    \"question\": \"Why does Geralt feel guilt about Blaviken?\"\n  }' | python3 -m json.tool)",
+      "Bash(cd /Users/chayutteeradakorn/lore-companion/frontend && npm create vite@latest . -- --template react --yes 2>&1)",
+      "Bash(npm install && npm install -D tailwindcss@3 autoprefixer postcss 2>&1 | tail -5)",
+      "Bash(npm install -D vite-plugin-pwa 2>&1 | tail -5)",
+      "Bash(npm install -D vite-plugin-pwa --legacy-peer-deps 2>&1 | tail -5)",
+      "Bash(npx tailwindcss init -p 2>&1)",
+      "Bash(npm run build 2>&1)",
+      "Bash(curl -s -X POST http://127.0.0.1:8000/ask \\\\\n  -H \"Content-Type: application/json\" \\\\\n  -d '{\"universe_id\":\"witcher3\",\"spoiler_tier\":\"velen_novigrad\",\"canon_sources\":[\"game_w3\"],\"question\":\"Who is Geralt?\"}' \\\\\n  2>&1 | head -c 300)",
+      "Bash(curl -s -w \"\\\\n%{http_code}\" http://127.0.0.1:8000/ 2>&1)"
+    ]
+  }
+}

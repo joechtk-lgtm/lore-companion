@@ -1,0 +1,87 @@
+{
+  "universe_id": "witcher3",
+  "display_name": "The Witcher 3: Wild Hunt",
+  "version": "1.0.0",
+  "spoiler_tiers": [
+    {
+      "id": "white_orchard",
+      "label": "White Orchard",
+      "description": "Before Velen. Tutorial area and opening events only.",
+      "order": 1
+    },
+    {
+      "id": "velen_novigrad",
+      "label": "Velen & Novigrad",
+      "description": "Searching for Ciri's trail through Velen and Novigrad.",
+      "order": 2
+    },
+    {
+      "id": "skellige",
+      "label": "Skellige",
+      "description": "Ciri found, Wild Hunt closing in. Skellige arc complete.",
+      "order": 3
+    },
+    {
+      "id": "kaer_morhen",
+      "label": "Kaer Morhen",
+      "description": "Before the final battle. Kaer Morhen siege complete.",
+      "order": 4
+    },
+    {
+      "id": "main_complete",
+      "label": "Main Game Complete",
+      "description": "Main story finished. Before any DLC.",
+      "order": 5
+    },
+    {
+      "id": "everything",
+      "label": "Everything",
+      "description": "Both Hearts of Stone and Blood and Wine DLCs complete.",
+      "order": 6
+    }
+  ],
+  "canon_sources": [
+    {
+      "id": "game_w3",
+      "label": "Witcher 3: Wild Hunt",
+      "description": "Main game and DLC content.",
+      "priority": 2
+    },
+    {
+      "id": "game_w1w2",
+      "label": "Witcher 1 & 2",
+      "description": "Previous games in the series.",
+      "priority": 2
+    },
+    {
+      "id": "books_sapkowski",
+      "label": "Sapkowski Novels",
+      "description": "Original source material. Primary canon.",
+      "priority": 1
+    },
+    {
+      "id": "netflix",
+      "label": "Netflix Adaptation",
+      "description": "Netflix series. Deviates significantly from books and games. Always labeled as adaptation.",
+      "priority": 3,
+      "always_flag_as_adaptation": true
+    }
+  ],
+  "lore_files": {
+    "characters": [
+      "geralt.md",
+      "yennefer.md",
+      "ciri.md"
+    ],
+    "factions": [
+      "nilfgaard.md",
+      "the_lodge.md"
+    ],
+    "events": [
+      "blaviken.md"
+    ]
+  },
+  "voice_profile": "voice_profile.md",
+  "canon_rules": "canon_rules.md",
+  "spoiler_tiers_detail": "spoiler_tiers.md"
+}
