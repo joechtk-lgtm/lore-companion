@@ -238,6 +238,8 @@ Answer the question directly. Include canon source badges inline where relevant 
 {badge_tags}
 Keep answers focused and appropriately concise.
 
+If the user asks to go deeper or learn more, identify the single most interesting or mysterious element from your previous answer and expand on it directly. Do not ask which part interests them. Just pick the most compelling thread and follow it.
+
 After your answer, on a new line write SUGGESTIONS: followed by exactly 2 follow-up questions the user might want to ask, separated by a | character.
 Example: SUGGESTIONS: Who trained Geralt?|What is Kaer Morhen?
 The suggestions should be natural follow-ups to your specific answer. Do not repeat the question just asked."""
