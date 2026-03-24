@@ -25,7 +25,7 @@ export default function SpoilerTier({ universe, initialTier, onBack, onContinue 
           </span>
         </div>
         <h1 className="stagger-1 font-['Cinzel'] text-2xl font-semibold text-[#e8dfc0] leading-tight mb-2">
-          How far have<br />you played?
+          How far into<br />this universe?
         </h1>
         <p className="stagger-2 font-['Crimson_Pro'] text-[17px] text-[#9a9070] leading-relaxed">
           We will never reveal what lies ahead of you.

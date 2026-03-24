@@ -8,7 +8,7 @@ export const UNIVERSES = {
     enterLabel: 'ENTER THE CONTINENT',
     wakeMessage: 'The Continent stirs. First calls take a moment to answer\u00a0\u2014 the server is waking from its rest.',
     sources: [
-      { id: 'game_w3', label: 'WITCHER 3 GAME', desc: 'Wild Hunt + both DLCs. The core experience.', required: true },
+      { id: 'game_w3', label: 'WITCHER 3 GAME', desc: 'Wild Hunt + both DLCs. The core experience.' },
       { id: 'game_w1w2', label: 'WITCHER 1 + 2 GAMES', desc: 'Adds backstory. Safe to include alongside W3.' },
       { id: 'books_sapkowski', label: 'SAPKOWSKI BOOKS', desc: 'Original canon. Where everything begins.' },
       { id: 'netflix', label: 'NETFLIX SERIES', desc: 'Adaptation only. Will be clearly labeled when referenced.' },
@@ -32,7 +32,7 @@ export const UNIVERSES = {
     enterLabel: 'ENTER THE LANDS BETWEEN',
     wakeMessage: 'The Lands Between stirs. First calls take a moment to answer\u00a0\u2014 the server is waking from its rest.',
     sources: [
-      { id: 'game_eldenring', label: 'ELDEN RING', desc: 'Base game. Item descriptions, NPC dialogue, environmental lore.', required: true },
+      { id: 'game_eldenring', label: 'ELDEN RING', desc: 'Base game. Item descriptions, NPC dialogue, environmental lore.' },
       { id: 'dlc_shadowoftherdtree', label: 'SHADOW OF THE ERDTREE', desc: "DLC. The Land of Shadow and Miquella's fate." },
     ],
     tiers: [
@@ -55,7 +55,7 @@ export const UNIVERSES = {
     enterLabel: 'ENTER THE IMPERIUM',
     wakeMessage: 'The desert stirs. First calls take a moment to answer\u00a0\u2014 the server is waking from its rest.',
     sources: [
-      { id: 'book_dune', label: 'DUNE (FRANK HERBERT)', desc: 'The original 1965 novel. Primary canon. Where everything begins.', required: true },
+      { id: 'book_dune', label: 'DUNE (FRANK HERBERT)', desc: 'The original 1965 novel. Primary canon. Where everything begins.' },
       { id: 'book_messiah', label: 'DUNE MESSIAH', desc: "Second novel. Paul's reckoning. The cost of the holy war." },
       { id: 'book_children', label: 'CHILDREN OF DUNE', desc: 'Third novel. Leto II and the Golden Path.' },
       { id: 'film_2021', label: 'DUNE: PART ONE (2021)', desc: 'Villeneuve adaptation. Faithful to book 1 part 1.' },
@@ -69,8 +69,8 @@ export const UNIVERSES = {
       { id: 'messiah', label: 'DUNE MESSIAH', desc: "The cost of the holy war. Paul's fate." },
       { id: 'everything', label: 'EVERYTHING', desc: 'Children of Dune and beyond. No limits.' },
     ],
-    defaultSources: ['book_dune'],
-    defaultTier: 'arrakis_arrival',
+    defaultSources: ['film_2021', 'film_2024'],
+    defaultTier: 'dune_complete',
   },
 }
 

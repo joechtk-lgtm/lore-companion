@@ -11,23 +11,22 @@ function BackArrow({ onClick }) {
 }
 
 export default function CanonSetup({ universe, initialSources, onBack, onContinue }) {
-  const { sources, accentColor } = universe
-  const required = sources.filter(s => s.required).map(s => s.id)
+  const { sources, accentColor, defaultSources } = universe
   const defaultSelected = initialSources
     ? new Set(initialSources)
-    : new Set(required)
+    : new Set(defaultSources || [])
 
   const [selected, setSelected] = useState(defaultSelected)
 
   function toggle(id) {
-    const src = sources.find(s => s.id === id)
-    if (src?.required) return
     setSelected(prev => {
       const next = new Set(prev)
       next.has(id) ? next.delete(id) : next.add(id)
       return next
     })
   }
+
+  const canContinue = selected.size > 0
 
   return (
     <div className="screen-enter flex flex-col min-h-screen px-5 py-10">
@@ -97,10 +96,11 @@ export default function CanonSetup({ universe, initialSources, onBack, onContinu
       {/* Continue */}
       <div className="mt-8 stagger-6">
         <button
-          onClick={() => onContinue([...selected])}
-          className="w-full py-4 rounded-[12px] border font-['Cinzel'] text-[12px] tracking-[0.2em] transition-all duration-150"
-          style={{ borderColor: accentColor, color: accentColor }}
-          onMouseEnter={e => e.currentTarget.style.backgroundColor = `${accentColor}0d`}
+          onClick={() => canContinue && onContinue([...selected])}
+          disabled={!canContinue}
+          className="w-full py-4 rounded-[12px] border font-['Cinzel'] text-[12px] tracking-[0.2em] transition-all duration-150 disabled:opacity-40 disabled:cursor-not-allowed"
+          style={{ borderColor: canContinue ? accentColor : '#5a5540', color: canContinue ? accentColor : '#5a5540' }}
+          onMouseEnter={e => { if (canContinue) e.currentTarget.style.backgroundColor = `${accentColor}0d` }}
           onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}
         >
           CONTINUE
