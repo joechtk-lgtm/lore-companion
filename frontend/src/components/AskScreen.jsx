@@ -376,7 +376,7 @@ export default function AskScreen({
             className="font-['Cinzel'] text-[10px] tracking-[0.1em] border rounded-[20px] px-3 py-1 transition-colors"
             style={{ color: accent, borderColor: `${accent}60` }}
           >
-            {universe.id === 'witcher3' ? 'WITCHER 3' : 'ELDEN RING'}
+            {universe.title.replace('THE ', '')}
           </button>
           <span className="font-['Cinzel'] text-[10px] tracking-[0.1em] text-[#5a5540] border border-[#2e2614] rounded-[20px] px-3 py-1">
             {tierLabel}

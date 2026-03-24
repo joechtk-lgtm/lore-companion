@@ -156,17 +156,11 @@ def filter_lore_content(content: str, allowed_tiers: set[str], tier_order: list[
     return "".join(result).strip()
 
 
-def extract_canon_badges(content: str) -> list[str]:
-    """Pull canon source badges referenced in lore content."""
-    matches = re.findall(r'\[(?:canon_source|game_\w+|dlc_\w+|books\w*|netflix)\]', content)
-    badges = set()
-    for m in matches:
-        inner = m.strip('[]')
-        if inner.startswith('canon_source:'):
-            badges.add(inner.split(':')[1].strip())
-        else:
-            badges.add(inner)
-    return sorted(badges)
+def extract_canon_badges(content: str, canon_sources: list[str]) -> list[str]:
+    """Pull canon source badges referenced in lore content, filtered to active sources."""
+    source_set = set(canon_sources)
+    matches = re.findall(r'\[([a-z][a-z0-9_]*)\]', content)
+    return sorted({m for m in matches if m in source_set})
 
 
 def load_lore_files(
@@ -333,10 +327,7 @@ async def ask(request: AskRequest, http_request: Request) -> AskResponse:
 
     canon_badges = extract_badges_from_answer(answer, request.canon_sources)
     if not canon_badges:
-        canon_badges = [
-            b for b in extract_canon_badges(lore_context)
-            if b in request.canon_sources
-        ]
+        canon_badges = extract_canon_badges(lore_context, request.canon_sources)
 
     confidence = "high" if has_lore_files else "general"
 
