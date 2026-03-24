@@ -191,11 +191,22 @@ export default function AskScreen({ settings, onReset }) {
   const [messages, setMessages] = useState([])
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
+  const [loadingStage, setLoadingStage] = useState(0)
   const [showSheet, setShowSheet] = useState(false)
   const bottomRef = useRef(null)
   const inputRef = useRef(null)
 
   const quote = useRef(QUOTES[Math.floor(Math.random() * QUOTES.length)]).current
+
+  useEffect(() => {
+    if (!loading) {
+      setLoadingStage(0)
+      return
+    }
+    const t1 = setTimeout(() => setLoadingStage(1), 8000)
+    const t2 = setTimeout(() => setLoadingStage(2), 20000)
+    return () => { clearTimeout(t1); clearTimeout(t2) }
+  }, [loading])
 
   const tierLabel = TIER_LABELS[settings.spoilerTier] || settings.spoilerTier
   const sourcesLabel = canonSourcesLabel(settings.canonSources)
@@ -321,7 +332,24 @@ export default function AskScreen({ settings, onReset }) {
             {messages.map((msg, i) => (
               <Message key={i} msg={msg} />
             ))}
-            {loading && <LoadingDots />}
+            {loading && (
+              loadingStage === 0 ? (
+                <LoadingDots />
+              ) : (
+                <div className="flex items-start gap-3 mb-4 answer-fade">
+                  <div className="flex-1 max-w-[85%]">
+                    <div className="rounded-[12px] px-4 py-3 bg-[#0e0d0b] border border-[#1e1c14] flex items-start gap-2">
+                      <Diamond />
+                      <p className="font-['Crimson_Pro'] text-[16px] italic text-[#5a5540] leading-relaxed">
+                        {loadingStage === 1
+                          ? 'The Continent stirs. First calls take a moment to answer\u00a0\u2014 the server is waking from its rest.'
+                          : 'Still summoning\u2026 this can take up to a minute on first use. Worth the wait.'}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )
+            )}
           </>
         )}
         <div ref={bottomRef} />
