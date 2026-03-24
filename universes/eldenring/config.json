@@ -1,0 +1,104 @@
+{
+  "universe_id": "eldenring",
+  "display_name": "Elden Ring",
+  "id": "eldenring",
+  "title": "Elden Ring",
+  "type": "game",
+  "accent_color": "#c4a882",
+  "spoiler_tiers": [
+    {
+      "id": "limgrave",
+      "label": "Limgrave",
+      "description": "Just started. First steps in the Lands Between.",
+      "order": 1
+    },
+    {
+      "id": "liurnia",
+      "label": "Liurnia + Caelid",
+      "description": "Past Stormveil. The academy and the rot.",
+      "order": 2
+    },
+    {
+      "id": "altus",
+      "label": "Altus Plateau + Leyndell",
+      "description": "Approaching the capital. Two shardbearers defeated.",
+      "order": 3
+    },
+    {
+      "id": "mountaintops",
+      "label": "Mountaintops + Farum Azula",
+      "description": "The forge. The fall of the Erdtree.",
+      "order": 4
+    },
+    {
+      "id": "main_complete",
+      "label": "Main Game Complete",
+      "description": "Any ending achieved. Before Shadow of the Erdtree.",
+      "order": 5
+    },
+    {
+      "id": "everything",
+      "label": "Everything",
+      "description": "Shadow of the Erdtree complete. No limits.",
+      "order": 6
+    }
+  ],
+  "canon_sources": [
+    {
+      "id": "game_eldenring",
+      "label": "Elden Ring",
+      "description": "Base game. Item descriptions, NPC dialogue, environmental lore.",
+      "priority": 1
+    },
+    {
+      "id": "dlc_shadowoftherdtree",
+      "label": "Shadow of the Erdtree",
+      "description": "DLC. The Land of Shadow and Miquella's fate. Labeled [dlc_sote] when referenced.",
+      "priority": 1
+    }
+  ],
+  "lore_files": {
+    "characters": [
+      "marika.md",
+      "radagon.md",
+      "ranni.md",
+      "malenia.md",
+      "radahn.md",
+      "godfrey.md",
+      "morgott.md",
+      "mohg.md",
+      "rykard.md",
+      "godrick.md",
+      "melina.md",
+      "miquella.md"
+    ],
+    "factions": [
+      "golden_order.md",
+      "tarnished.md",
+      "two_fingers.md",
+      "volcano_manor.md",
+      "frenzied_flame.md"
+    ],
+    "locations": [
+      "erdtree.md",
+      "leyndell.md",
+      "farum_azula.md",
+      "land_of_shadow.md"
+    ],
+    "concepts": [
+      "elden_ring_what_it_is.md",
+      "greater_will.md",
+      "great_runes.md",
+      "grace.md",
+      "outer_gods.md"
+    ],
+    "events": [
+      "shattering.md",
+      "night_of_black_knives.md",
+      "burning_of_erdtree.md"
+    ]
+  },
+  "voice_profile": "voice_profile.md",
+  "canon_rules": "canon_rules.md",
+  "spoiler_tiers_detail": "spoiler_tiers.md"
+}

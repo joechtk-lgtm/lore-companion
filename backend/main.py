@@ -13,7 +13,7 @@ from pydantic import BaseModel
 
 load_dotenv()
 
-app = FastAPI(title="Lore Companion API", version="1.0.0")
+app = FastAPI(title="Lore Companion API", version="2.0.0")
 
 app.add_middleware(
     CORSMiddleware,
@@ -26,14 +26,6 @@ app.add_middleware(
 )
 
 UNIVERSES_DIR = Path(__file__).parent.parent / "universes"
-SPOILER_TIER_ORDER = [
-    "white_orchard",
-    "velen_novigrad",
-    "skellige",
-    "kaer_morhen",
-    "main_complete",
-    "everything",
-]
 
 
 # --- Rate Limiting ---
@@ -77,7 +69,7 @@ def check_rate_limits(ip: str) -> None:
         raise HTTPException(
             status_code=429,
             detail=(
-                "You have asked many questions of the Continent. "
+                "You have asked many questions. "
                 "Rest, and return when the hour has passed."
             ),
         )
@@ -100,6 +92,8 @@ class AskResponse(BaseModel):
     answer: str
     canon_badges: list[str]
     spoiler_safe: bool
+    suggestions: list[str]
+    confidence: str  # "high" | "general"
 
 
 # --- Lore Loading ---
@@ -112,28 +106,35 @@ def load_universe_config(universe_id: str) -> dict:
         return json.load(f)
 
 
-def get_allowed_tiers(spoiler_tier: str) -> set[str]:
+def get_tier_order(config: dict) -> list[str]:
+    """Return the ordered list of tier IDs from the universe config."""
+    return [t["id"] for t in config.get("spoiler_tiers", [])]
+
+
+def get_allowed_tiers(spoiler_tier: str, config: dict) -> set[str]:
     """Return all tiers at or below the requested spoiler tier."""
-    if spoiler_tier not in SPOILER_TIER_ORDER:
+    tier_order = get_tier_order(config)
+    if spoiler_tier not in tier_order:
         raise HTTPException(
             status_code=400,
-            detail=f"Invalid spoiler_tier '{spoiler_tier}'. Valid values: {SPOILER_TIER_ORDER}"
+            detail=f"Invalid spoiler_tier '{spoiler_tier}'. Valid values: {tier_order}"
         )
-    idx = SPOILER_TIER_ORDER.index(spoiler_tier)
-    return set(SPOILER_TIER_ORDER[: idx + 1])
+    idx = tier_order.index(spoiler_tier)
+    return set(tier_order[: idx + 1])
 
 
-def filter_lore_content(content: str, allowed_tiers: set[str]) -> str:
+def filter_lore_content(content: str, allowed_tiers: set[str], tier_order: list[str]) -> str:
     """
     Filter markdown lore content by spoiler tier tags.
 
     Sections are tagged with: [spoiler_tier: tier_name]
     A section runs until the next tag or end of file.
-    Sections with no tag default to the lowest tier (white_orchard).
+    Sections with no tag default to the lowest tier (first in tier_order).
     """
     lines = content.splitlines(keepends=True)
     result = []
-    current_tier = "white_orchard"  # default if no tag present
+    default_tier = tier_order[0] if tier_order else "limgrave"
+    current_tier = default_tier
     include_current = True
 
     for line in lines:
@@ -157,7 +158,7 @@ def filter_lore_content(content: str, allowed_tiers: set[str]) -> str:
 
 def extract_canon_badges(content: str) -> list[str]:
     """Pull canon source badges referenced in lore content."""
-    matches = re.findall(r'\[(?:canon_source|game_w3|game_w1w2|books|netflix)\]', content)
+    matches = re.findall(r'\[(?:canon_source|game_\w+|dlc_\w+|books\w*|netflix)\]', content)
     badges = set()
     for m in matches:
         inner = m.strip('[]')
@@ -168,8 +169,13 @@ def extract_canon_badges(content: str) -> list[str]:
     return sorted(badges)
 
 
-def load_lore_files(universe_id: str, config: dict, allowed_tiers: set[str], canon_sources: list[str]) -> str:
-    """Load and filter all lore files for the universe."""
+def load_lore_files(
+    universe_id: str, config: dict, allowed_tiers: set[str], tier_order: list[str]
+) -> tuple[str, bool]:
+    """
+    Load and filter all lore files for the universe.
+    Returns (lore_context, has_lore_files).
+    """
     universe_dir = UNIVERSES_DIR / universe_id
     chunks = []
 
@@ -180,7 +186,7 @@ def load_lore_files(universe_id: str, config: dict, allowed_tiers: set[str], can
             if not filepath.exists():
                 continue
             raw = filepath.read_text(encoding="utf-8")
-            filtered = filter_lore_content(raw, allowed_tiers)
+            filtered = filter_lore_content(raw, allowed_tiers, tier_order)
             if filtered:
                 chunks.append(f"### {category.upper()}: {filename.replace('.md', '').upper()}\n\n{filtered}")
 
@@ -192,22 +198,26 @@ def load_lore_files(universe_id: str, config: dict, allowed_tiers: set[str], can
             if fpath.exists():
                 chunks.append(fpath.read_text(encoding="utf-8"))
 
-    return "\n\n---\n\n".join(chunks)
+    has_lore = len(chunks) > 2  # more than just voice/canon files
+    return "\n\n---\n\n".join(chunks), has_lore
 
 
 # --- Claude API Call ---
 
-def build_system_prompt(lore_context: str, canon_sources: list[str]) -> str:
-    source_labels = {
-        "game_w3": "Witcher 3: Wild Hunt (main game and DLCs)",
-        "game_w1w2": "Witcher 1 and Witcher 2",
-        "books_sapkowski": "Sapkowski novels (primary canon)",
-        "netflix": "Netflix adaptation (always label as adaptation, never blend silently with game/book canon)",
-    }
-    active_sources = [source_labels.get(s, s) for s in canon_sources]
+def build_system_prompt(
+    lore_context: str, canon_sources: list[str], config: dict
+) -> str:
+    universe_name = config.get("display_name", config.get("title", "this universe"))
+
+    # Build source labels from config
+    source_map = {s["id"]: s["label"] for s in config.get("canon_sources", [])}
+    active_sources = [source_map.get(s, s) for s in canon_sources]
     sources_str = "\n".join(f"- {s}" for s in active_sources)
 
-    return f"""You are a lore guide for The Witcher 3: Wild Hunt universe.
+    # Build valid badge tags from canon sources
+    badge_tags = " | ".join(f"[{s}]" for s in canon_sources)
+
+    return f"""You are a lore guide for {universe_name}.
 
 ACTIVE CANON SOURCES (only draw from these):
 {sources_str}
@@ -216,12 +226,7 @@ LORE KNOWLEDGE BASE:
 {lore_context}
 
 VOICE AND STYLE:
-Follow the voice profile exactly. Matter-of-fact. Dry. Morally grey. Short declarative sentences.
-Never use the word "delve". Never be romantic or heroic about violence.
-
-CANON RULES:
-Books are primary canon. Games are faithful sequels. Netflix ALWAYS labeled as adaptation.
-Never blend Netflix details into book/game answers without flagging it.
+Follow the voice profile in the lore knowledge base exactly.
 
 SPOILER SAFETY:
 You have already been given only the lore content appropriate for this user's spoiler tier.
@@ -230,22 +235,46 @@ If a question asks about something you genuinely don't know, say so plainly.
 
 RESPONSE FORMAT:
 Answer the question directly. Include canon source badges inline where relevant using:
-[game_w3], [game_w1w2], [books], [netflix]
-Keep answers focused and appropriately concise. This is not a lecture — it's a traveler telling you what they know."""
+{badge_tags}
+Keep answers focused and appropriately concise.
+
+After your answer, on a new line write SUGGESTIONS: followed by exactly 2 follow-up questions the user might want to ask, separated by a | character.
+Example: SUGGESTIONS: Who trained Geralt?|What is Kaer Morhen?
+The suggestions should be natural follow-ups to your specific answer. Do not repeat the question just asked."""
 
 
-BADGE_TO_SOURCE = {
-    "game_w3": "game_w3",
-    "game_w1w2": "game_w1w2",
-    "books": "books_sapkowski",
-    "books_sapkowski": "books_sapkowski",
-    "netflix": "netflix",
-}
+def extract_badges_from_answer(answer: str, canon_sources: list[str]) -> list[str]:
+    """Extract canon source badges from answer text, filtered to active sources."""
+    # Build pattern from active canon sources
+    source_pattern = "|".join(re.escape(s) for s in canon_sources)
+    # Also match shorthand tags like [books], [netflix]
+    shorthand = {
+        "game_w3": ["game_w3"],
+        "game_w1w2": ["game_w1w2"],
+        "books_sapkowski": ["books", "books_sapkowski"],
+        "netflix": ["netflix"],
+        "game_eldenring": ["game_eldenring"],
+        "dlc_shadowoftherdtree": ["dlc_shadowoftherdtree", "dlc_sote"],
+    }
+    all_tags = set()
+    for src in canon_sources:
+        all_tags.update(shorthand.get(src, [src]))
+
+    pattern = "|".join(re.escape(t) for t in all_tags)
+    found = re.findall(rf'\[({pattern})\]', answer)
+    return sorted(set(found))
 
 
-def extract_badges_from_answer(answer: str) -> list[str]:
-    badges = re.findall(r'\[(game_w3|game_w1w2|books|netflix|books_sapkowski)\]', answer)
-    return sorted(set(badges))
+def parse_suggestions(raw_answer: str) -> tuple[str, list[str]]:
+    """Split SUGGESTIONS line from answer text."""
+    if "SUGGESTIONS:" not in raw_answer:
+        return raw_answer.strip(), []
+
+    parts = raw_answer.split("SUGGESTIONS:", 1)
+    answer = parts[0].strip()
+    suggestion_line = parts[1].strip()
+    suggestions = [s.strip() for s in suggestion_line.split("|") if s.strip()]
+    return answer, suggestions[:2]
 
 
 # --- Endpoint ---
@@ -257,7 +286,8 @@ async def ask(request: AskRequest, http_request: Request) -> AskResponse:
 
     # Validate and load universe
     config = load_universe_config(request.universe_id)
-    allowed_tiers = get_allowed_tiers(request.spoiler_tier)
+    tier_order = get_tier_order(config)
+    allowed_tiers = get_allowed_tiers(request.spoiler_tier, config)
 
     # Validate canon sources
     valid_sources = {s["id"] for s in config.get("canon_sources", [])}
@@ -269,15 +299,15 @@ async def ask(request: AskRequest, http_request: Request) -> AskResponse:
         )
 
     # Load and filter lore
-    lore_context = load_lore_files(
-        request.universe_id, config, allowed_tiers, request.canon_sources
+    lore_context, has_lore_files = load_lore_files(
+        request.universe_id, config, allowed_tiers, tier_order
     )
 
     if not lore_context.strip():
         raise HTTPException(status_code=500, detail="No lore content available for this tier.")
 
     # Build prompt
-    system_prompt = build_system_prompt(lore_context, request.canon_sources)
+    system_prompt = build_system_prompt(lore_context, request.canon_sources, config)
 
     # Call Claude
     api_key = os.getenv("ANTHROPIC_API_KEY")
@@ -291,28 +321,29 @@ async def ask(request: AskRequest, http_request: Request) -> AskResponse:
 
     with client.messages.stream(
         model="claude-haiku-4-5-20251001",
-        max_tokens=1024,
+        max_tokens=1200,
         system=system_prompt,
         messages=messages,
     ) as stream:
-        answer = stream.get_final_message().content[0].text
+        raw_answer = stream.get_final_message().content[0].text
 
-    selected = set(request.canon_sources)
-    canon_badges = [
-        b for b in extract_badges_from_answer(answer)
-        if BADGE_TO_SOURCE.get(b) in selected
-    ]
+    answer, suggestions = parse_suggestions(raw_answer)
+
+    canon_badges = extract_badges_from_answer(answer, request.canon_sources)
     if not canon_badges:
-        # Fall back to badges from the lore files used
         canon_badges = [
             b for b in extract_canon_badges(lore_context)
-            if BADGE_TO_SOURCE.get(b) in selected
+            if b in request.canon_sources
         ]
+
+    confidence = "high" if has_lore_files else "general"
 
     return AskResponse(
         answer=answer,
         canon_badges=canon_badges,
         spoiler_safe=True,
+        suggestions=suggestions,
+        confidence=confidence,
     )
 
 
@@ -338,5 +369,12 @@ async def list_universes():
     if UNIVERSES_DIR.exists():
         for d in UNIVERSES_DIR.iterdir():
             if d.is_dir() and (d / "config.json").exists():
-                universes.append(d.name)
+                config_path = d / "config.json"
+                with open(config_path) as f:
+                    cfg = json.load(f)
+                universes.append({
+                    "id": d.name,
+                    "display_name": cfg.get("display_name", d.name),
+                    "accent_color": cfg.get("accent_color", "#c9a84c"),
+                })
     return {"universes": universes}

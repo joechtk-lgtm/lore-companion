@@ -18,7 +18,11 @@
       "Bash(curl -s -X POST http://127.0.0.1:8000/ask \\\\\n  -H \"Content-Type: application/json\" \\\\\n  -d '{\"universe_id\":\"witcher3\",\"spoiler_tier\":\"velen_novigrad\",\"canon_sources\":[\"game_w3\"],\"question\":\"Who is Geralt?\"}' \\\\\n  2>&1 | head -c 300)",
       "Bash(curl -s -w \"\\\\n%{http_code}\" http://127.0.0.1:8000/ 2>&1)",
       "Bash(cd /Users/chayutteeradakorn/lore-companion/frontend && npm install 2>&1)",
-      "Bash(git add . && git status)"
+      "Bash(git add . && git status)",
+      "Bash(git commit -m \"$\\(cat <<'EOF'\nadd wake-up messages to loading state after 8s and 20s delays\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push)",
+      "Bash(cd /Users/chayutteeradakorn/lore-companion/frontend && npm run build 2>&1)",
+      "Bash(cd /Users/chayutteeradakorn/lore-companion && git add . && git status)"
     ]
   }
 }
