@@ -1,0 +1,128 @@
+{
+  "id": "dune",
+  "display_name": "Dune",
+  "title": "Dune",
+  "type": "book_and_film",
+  "accent_color": "#c4a35a",
+  "spoiler_tiers": [
+    {
+      "id": "arrakis_arrival",
+      "label": "Arrival on Arrakis",
+      "description": "Paul arrives. The spice. The desert.",
+      "order": 1
+    },
+    {
+      "id": "fremen",
+      "label": "Among the Fremen",
+      "description": "Paul joins the Fremen. Stilgar. Chani.",
+      "order": 2
+    },
+    {
+      "id": "muadib",
+      "label": "Muad'Dib Rises",
+      "description": "Paul becomes Muad'Dib. The holy war begins.",
+      "order": 3
+    },
+    {
+      "id": "dune_complete",
+      "label": "Dune Complete",
+      "description": "First book or both films complete.",
+      "order": 4
+    },
+    {
+      "id": "messiah",
+      "label": "Dune Messiah",
+      "description": "The cost of the holy war. Paul's fate.",
+      "order": 5
+    },
+    {
+      "id": "everything",
+      "label": "Everything",
+      "description": "Children of Dune and beyond. No limits.",
+      "order": 6
+    }
+  ],
+  "canon_sources": [
+    {
+      "id": "book_dune",
+      "label": "Dune (Frank Herbert)",
+      "description": "The original 1965 novel. Primary canon.",
+      "priority": 1
+    },
+    {
+      "id": "book_messiah",
+      "label": "Dune Messiah (Frank Herbert)",
+      "description": "Second novel. Paul's reckoning.",
+      "priority": 1
+    },
+    {
+      "id": "book_children",
+      "label": "Children of Dune (Frank Herbert)",
+      "description": "Third novel. Leto II and Ghanima.",
+      "priority": 1
+    },
+    {
+      "id": "film_2021",
+      "label": "Dune: Part One (2021)",
+      "description": "Denis Villeneuve adaptation. Faithful to book 1 part 1.",
+      "priority": 2
+    },
+    {
+      "id": "film_2024",
+      "label": "Dune: Part Two (2024)",
+      "description": "Denis Villeneuve adaptation. Book 1 part 2 with some changes.",
+      "priority": 2
+    }
+  ],
+  "lore_files": {
+    "characters": [
+      "paul_atreides.md",
+      "lady_jessica.md",
+      "chani.md",
+      "stilgar.md",
+      "baron_harkonnen.md",
+      "feyd_rautha.md",
+      "alia.md",
+      "leto_atreides_sr.md",
+      "irulan.md",
+      "duncan_idaho.md",
+      "gurney_halleck.md",
+      "thufir_hawat.md"
+    ],
+    "factions": [
+      "bene_gesserit.md",
+      "fremen.md",
+      "spacing_guild.md",
+      "bene_tleilax.md",
+      "choam.md",
+      "house_atreides.md",
+      "house_harkonnen.md",
+      "sardaukar.md"
+    ],
+    "locations": [
+      "arrakis.md",
+      "giedi_prime.md",
+      "caladan.md",
+      "sietch_tabr.md",
+      "arrakeen.md"
+    ],
+    "concepts": [
+      "spice_melange.md",
+      "prescience.md",
+      "bene_gesserit_powers.md",
+      "golden_path.md",
+      "kwisatz_haderach.md",
+      "mentat.md",
+      "great_houses.md"
+    ],
+    "events": [
+      "fall_of_house_atreides.md",
+      "battle_of_arrakeen.md",
+      "the_jihad.md",
+      "gom_jabbar_test.md"
+    ]
+  },
+  "voice_profile": "voice_profile.md",
+  "canon_rules": "canon_rules.md",
+  "spoiler_tiers_detail": "spoiler_tiers.md"
+}
