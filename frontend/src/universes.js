@@ -28,7 +28,7 @@ export const UNIVERSES = {
     title: 'ELDEN RING',
     subtitle: 'The Lands Between. The Shattering. The Erdtree.',
     tags: ['Characters', 'Lore', 'The Shattering'],
-    accentColor: '#c4a882',
+    accentColor: '#b8860b',
     enterLabel: 'ENTER THE LANDS BETWEEN',
     wakeMessage: 'The Lands Between stirs. First calls take a moment to answer\u00a0\u2014 the server is waking from its rest.',
     sources: [
@@ -51,7 +51,7 @@ export const UNIVERSES = {
     title: 'DUNE',
     subtitle: "Arrakis. The spice. The prophecy. The cost of becoming a god.",
     tags: ['Books', 'Films', 'The Imperium'],
-    accentColor: '#c4a35a',
+    accentColor: '#d4956a',
     enterLabel: 'ENTER THE IMPERIUM',
     wakeMessage: 'The desert stirs. First calls take a moment to answer\u00a0\u2014 the server is waking from its rest.',
     sources: [
@@ -77,7 +77,7 @@ export const UNIVERSES = {
     title: 'LORD OF THE RINGS',
     subtitle: 'Middle-earth. The One Ring. The long defeat.',
     tags: ['Books', 'Films', 'The Silmarillion'],
-    accentColor: '#8a9e6e',
+    accentColor: '#6b8f5e',
     enterLabel: 'ENTER MIDDLE-EARTH',
     wakeMessage: 'Middle-earth stirs. First calls take a moment to answer\u00a0\u2014 the server is waking from its rest.',
     sources: [

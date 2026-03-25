@@ -4,7 +4,7 @@
   "id": "eldenring",
   "title": "Elden Ring",
   "type": "game",
-  "accent_color": "#c4a882",
+  "accent_color": "#b8860b",
   "spoiler_tiers": [
     {
       "id": "limgrave",

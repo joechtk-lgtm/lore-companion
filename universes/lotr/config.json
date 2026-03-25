@@ -3,7 +3,7 @@
   "display_name": "Lord of the Rings",
   "title": "Lord of the Rings",
   "type": "book_and_film",
-  "accent_color": "#8a9e6e",
+  "accent_color": "#6b8f5e",
   "spoiler_tiers": [
     {
       "id": "shire",
