@@ -72,6 +72,34 @@ export const UNIVERSES = {
     defaultSources: ['film_2021', 'film_2024'],
     defaultTier: 'dune_complete',
   },
+  lotr: {
+    id: 'lotr',
+    title: 'LORD OF THE RINGS',
+    subtitle: 'Middle-earth. The One Ring. The long defeat.',
+    tags: ['Books', 'Films', 'The Silmarillion'],
+    accentColor: '#8a9e6e',
+    enterLabel: 'ENTER MIDDLE-EARTH',
+    wakeMessage: 'Middle-earth stirs. First calls take a moment to answer\u00a0\u2014 the server is waking from its rest.',
+    sources: [
+      { id: 'book_lotr', label: 'THE LORD OF THE RINGS', desc: 'Tolkien\'s trilogy. The primary canon.' },
+      { id: 'book_silmarillion', label: 'THE SILMARILLION', desc: 'The deep history. Creation, the First Age, Númenor.' },
+      { id: 'book_hobbit', label: 'THE HOBBIT', desc: 'Bilbo\'s journey. The finding of the Ring.' },
+      { id: 'film_fellowship', label: 'THE FELLOWSHIP OF THE RING (2001)', desc: 'Jackson film. First part of the trilogy.' },
+      { id: 'film_two_towers', label: 'THE TWO TOWERS (2002)', desc: 'Jackson film. Second part of the trilogy.' },
+      { id: 'film_return_king', label: 'THE RETURN OF THE KING (2003)', desc: 'Jackson film. Third part of the trilogy.' },
+      { id: 'film_rings_of_power', label: 'RINGS OF POWER (SERIES)', desc: 'Amazon series. Second Age adaptation. Always labeled.' },
+    ],
+    tiers: [
+      { id: 'shire', label: 'THE SHIRE', desc: 'The journey begins. Before Rivendell.' },
+      { id: 'rivendell', label: 'RIVENDELL', desc: 'The Council of Elrond. The Fellowship formed.' },
+      { id: 'rohan', label: 'ROHAN + HELM\'S DEEP', desc: 'The Fellowship broken. The Rohirrim.' },
+      { id: 'gondor', label: 'GONDOR + PELENNOR', desc: 'The siege of Minas Tirith. The Witch-king.' },
+      { id: 'lotr_complete', label: 'TRILOGY COMPLETE', desc: 'The Ring destroyed. Aragorn crowned.' },
+      { id: 'everything', label: 'EVERYTHING', desc: 'Silmarillion, Hobbit, appendices. No limits.' },
+    ],
+    defaultSources: ['book_lotr'],
+    defaultTier: 'shire',
+  },
 }
 
 export function getTierLabel(universe, tierId) {

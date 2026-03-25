@@ -8,18 +8,44 @@ const API_BASE = import.meta.env.VITE_API_URL ||
 
 const QUOTES = {
   witcher3: [
-    { text: 'Evil is evil. Lesser, greater, middling. If I have to choose between one evil and another, I\'d rather not choose at all.', author: 'Geralt of Rivia' },
-    { text: 'The world doesn\'t need a hero. It needs a professional.', author: 'Geralt of Rivia' },
+    { text: "Evil is evil. Lesser, greater, middling. If I have to choose between one evil and another, I'd rather not choose at all.", author: 'Geralt of Rivia' },
+    { text: "The world doesn't need a hero. It needs a professional.", author: 'Geralt of Rivia' },
     { text: 'People like to invent monsters and monstrosities. Then they seem less monstrous themselves.', author: 'Andrzej Sapkowski' },
+    { text: "You can't stop a soldier from being afraid. You can only teach him not to show it.", author: 'Vesemir' },
+    { text: "Mistakes are also important to me. I don't cross them out of my life or memory.", author: 'Geralt of Rivia' },
     { text: 'Not all that is black is darkness.', author: 'Dandelion' },
-    { text: 'Mistakes are also important to me. I don\'t cross them out of my life or memory.', author: 'Geralt of Rivia' },
   ],
   eldenring: [
-    { text: 'Greet the Erdtree with thine eyes. It is the image of the golden order of this world.', author: 'Item description' },
-    { text: 'Tarnished. The grace of gold has long since dried from thy decrepit form.', author: 'Margit the Fell Omen' },
-    { text: 'I am Melina. I offer you an accord.', author: 'Melina' },
-    { text: 'Burn it all. The thorns, the capital, the Erdtree. Nothing deserves to remain.', author: 'Ranni the Witch' },
-    { text: 'The Elden Ring. The source of the Erdtree\'s power. Shattered by Queen Marika.', author: 'Item description' },
+    { text: 'Arise now, ye Tarnished. Ye dead, who yet live.', author: 'Elden Ring' },
+    { text: "The Elden Ring. The source of the Erdtree's power. Coveted by all who draw breath.", author: 'Elden Ring' },
+    { text: 'I will not become a lord. No, I will put an end to the reign of the Erdtree.', author: 'Ranni the Witch' },
+    { text: 'A lord is raised up and brought low. The Erdtree governs all.', author: 'Elden Ring' },
+    { text: 'Eternal city, sunken underground. Consigned to the dark since the time of the crucible.', author: 'Elden Ring' },
+    { text: 'The stars age, wane, and die. And so do all things.', author: 'Ranni the Witch' },
+  ],
+  dune: [
+    { text: 'I must not fear. Fear is the mind-killer.', author: 'Paul Atreides' },
+    { text: 'The spice must flow.', author: 'Dune' },
+    { text: 'He who controls the spice controls the universe.', author: 'Baron Harkonnen' },
+    { text: 'A beginning is the time for taking the most delicate care that balances are correct.', author: "The Manual of Muad'Dib" },
+    { text: "The mystery of life isn't a problem to solve, but a reality to experience.", author: 'Frank Herbert' },
+    { text: 'Deep in the human unconscious is a pervasive need for a logical universe that makes sense.', author: 'Frank Herbert' },
+  ],
+  lotr: [
+    { text: 'Even the smallest person can change the course of the future.', author: 'Galadriel' },
+    { text: 'All we have to decide is what to do with the time that is given us.', author: 'Gandalf' },
+    { text: 'Not all those who wander are lost.', author: 'J.R.R. Tolkien' },
+    { text: 'The world is indeed full of peril and in it there are many dark places.', author: 'Haldir' },
+    { text: 'I will not say do not weep, for not all tears are an evil.', author: 'Gandalf' },
+    { text: 'There is some good in this world, and it\'s worth fighting for.', author: 'Samwise Gamgee' },
+  ],
+  got: [
+    { text: 'When you play the game of thrones, you win or you die.', author: 'Cersei Lannister' },
+    { text: 'A mind needs books as a sword needs a whetstone.', author: 'Tyrion Lannister' },
+    { text: 'The night is dark and full of terrors.', author: 'Melisandre' },
+    { text: 'Words are wind.', author: 'George R.R. Martin' },
+    { text: 'Chaos is not a pit. Chaos is a ladder.', author: 'Petyr Baelish' },
+    { text: 'Winter is coming.', author: 'House Stark' },
   ],
 }
 
@@ -260,8 +286,8 @@ export default function AskScreen({
   const inputRef = useRef(null)
 
   const accent = universe.accentColor
-  const quotesForUniverse = QUOTES[universe.id] || QUOTES.witcher3
-  const quote = useRef(quotesForUniverse[Math.floor(Math.random() * quotesForUniverse.length)]).current
+  const universeQuotes = QUOTES[universe.id] || QUOTES.witcher3
+  const quote = useRef(universeQuotes[Math.floor(Math.random() * universeQuotes.length)]).current
   const tierLabel = getTierLabel(universe, settings.spoilerTier)
 
   // Wake-up message timer

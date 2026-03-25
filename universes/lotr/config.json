@@ -1,0 +1,148 @@
+{
+  "id": "lotr",
+  "display_name": "Lord of the Rings",
+  "title": "Lord of the Rings",
+  "type": "book_and_film",
+  "accent_color": "#8a9e6e",
+  "spoiler_tiers": [
+    {
+      "id": "shire",
+      "label": "The Shire",
+      "description": "Just started. Bilbo's birthday. The ring.",
+      "order": 1
+    },
+    {
+      "id": "rivendell",
+      "label": "Rivendell + Moria",
+      "description": "The Fellowship formed. Moria's shadow.",
+      "order": 2
+    },
+    {
+      "id": "rohan",
+      "label": "Rohan + Helm's Deep",
+      "description": "Fellowship broken. The war begins.",
+      "order": 3
+    },
+    {
+      "id": "gondor",
+      "label": "Gondor + Mount Doom",
+      "description": "The siege. The fires. The end.",
+      "order": 4
+    },
+    {
+      "id": "lotr_complete",
+      "label": "Trilogy Complete",
+      "description": "All three films or books complete.",
+      "order": 5
+    },
+    {
+      "id": "everything",
+      "label": "Everything",
+      "description": "Silmarillion, Hobbit, Rings of Power. No limits.",
+      "order": 6
+    }
+  ],
+  "canon_sources": [
+    {
+      "id": "book_lotr",
+      "label": "The Lord of the Rings (Tolkien)",
+      "description": "The original trilogy. Primary canon.",
+      "priority": 1
+    },
+    {
+      "id": "book_silmarillion",
+      "label": "The Silmarillion",
+      "description": "The deep history. The creation of the world.",
+      "priority": 1
+    },
+    {
+      "id": "book_hobbit",
+      "label": "The Hobbit",
+      "description": "Bilbo's journey. The finding of the Ring.",
+      "priority": 1
+    },
+    {
+      "id": "film_fellowship",
+      "label": "The Fellowship of the Ring (2001)",
+      "description": "Jackson adaptation. Faithful with omissions.",
+      "priority": 2
+    },
+    {
+      "id": "film_two_towers",
+      "label": "The Two Towers (2002)",
+      "description": "Jackson adaptation. Some changes from the book.",
+      "priority": 2
+    },
+    {
+      "id": "film_return_king",
+      "label": "The Return of the King (2003)",
+      "description": "Jackson adaptation. Extended edition recommended.",
+      "priority": 2
+    },
+    {
+      "id": "film_rings_of_power",
+      "label": "Rings of Power (Amazon)",
+      "description": "Adaptation. Diverges from book canon on timeline and characters. Always labeled.",
+      "priority": 3,
+      "always_flag_as_adaptation": true
+    }
+  ],
+  "lore_files": {
+    "characters": [
+      "frodo.md",
+      "gandalf.md",
+      "aragorn.md",
+      "legolas.md",
+      "gimli.md",
+      "samwise.md",
+      "sauron.md",
+      "saruman.md",
+      "gollum.md",
+      "boromir.md",
+      "arwen.md",
+      "eowyn.md",
+      "faramir.md",
+      "treebeard.md",
+      "galadriel.md"
+    ],
+    "factions": [
+      "fellowship.md",
+      "valar.md",
+      "istari.md",
+      "elves.md",
+      "dwarves.md",
+      "hobbits.md",
+      "nazgul.md",
+      "rohirrim.md",
+      "gondor.md"
+    ],
+    "locations": [
+      "the_shire.md",
+      "rivendell.md",
+      "moria.md",
+      "lothlorien.md",
+      "rohan.md",
+      "gondor.md",
+      "mordor.md",
+      "numenor.md"
+    ],
+    "concepts": [
+      "the_one_ring.md",
+      "rings_of_power.md",
+      "ainulindale.md",
+      "elvish_immortality.md",
+      "palantiri.md",
+      "the_light_of_earendil.md"
+    ],
+    "events": [
+      "war_of_the_ring.md",
+      "forging_of_the_rings.md",
+      "fall_of_numenor.md",
+      "battle_of_dagorlad.md",
+      "council_of_elrond.md"
+    ]
+  },
+  "voice_profile": "voice_profile.md",
+  "canon_rules": "canon_rules.md",
+  "spoiler_tiers_detail": "spoiler_tiers.md"
+}
