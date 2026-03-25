@@ -90,7 +90,31 @@ function ConfidenceIndicator({ confidence, accentColor }) {
   )
 }
 
+function SpoilerGateButtons({ accentColor, onReveal, onKeepSafe }) {
+  return (
+    <div className="mt-3 flex items-center gap-3">
+      <button
+        onClick={onReveal}
+        className="font-['Cinzel'] text-[10px] tracking-[0.1em] rounded-[8px] px-4 py-1.5 transition-all duration-150"
+        style={{ border: `0.5px solid ${accentColor}`, color: accentColor, background: 'transparent' }}
+        onMouseEnter={e => e.currentTarget.style.opacity = '0.8'}
+        onMouseLeave={e => e.currentTarget.style.opacity = '1'}
+      >
+        Tell me anyway
+      </button>
+      <button
+        onClick={onKeepSafe}
+        className="font-['Crimson_Pro'] text-[13px] italic text-[#5a5540] px-4 py-1.5 transition-colors hover:text-[#9a9070]"
+      >
+        Keep it safe
+      </button>
+    </div>
+  )
+}
+
 function Message({ msg, accentColor, onSuggestionTap, onGoDeeper }) {
+  const [gateChoice, setGateChoice] = useState(null) // null | 'revealed' | 'kept'
+
   if (msg.role === 'user') {
     return (
       <div className="flex justify-end mb-4 answer-fade">
@@ -117,7 +141,93 @@ function Message({ msg, accentColor, onSuggestionTap, onGoDeeper }) {
     )
   }
 
-  // assistant
+  // Spoiler-gated assistant message
+  if (msg.spoilerGated) {
+    const isRevealed = gateChoice === 'revealed'
+    const shownText = isRevealed ? msg.gatedAnswer : msg.gatedMessage
+
+    return (
+      <div className="mb-4 answer-fade">
+        <div className="flex items-start gap-3">
+          <div className="flex-1 max-w-[90%]">
+            <div className="rounded-[12px] px-4 py-3 bg-[#0e0d0b] border border-[#1e1c14]">
+              {isRevealed && (
+                <p
+                  className="font-['Cinzel'] text-[9px] tracking-[0.1em] mb-2"
+                  style={{ color: accentColor }}
+                >
+                  SPOILERS REVEALED AT YOUR REQUEST
+                </p>
+              )}
+              <p className="font-['Crimson_Pro'] text-[17px] text-[#9a9070] leading-relaxed whitespace-pre-wrap answer-fade">
+                {shownText}
+              </p>
+
+              {isRevealed && msg.badges?.length > 0 && (
+                <div className="mt-3 flex flex-wrap gap-1.5">
+                  {msg.badges.map(badge => (
+                    <span
+                      key={badge}
+                      className="font-['Crimson_Pro'] text-[10px] tracking-[0.1em] border rounded-[20px] px-2 py-0.5 uppercase"
+                      style={{ color: accentColor, borderColor: `${accentColor}40` }}
+                    >
+                      {badge}
+                    </span>
+                  ))}
+                </div>
+              )}
+
+              {isRevealed && (
+                <ConfidenceIndicator confidence={msg.confidence} accentColor={accentColor} />
+              )}
+
+              {gateChoice === null && (
+                <SpoilerGateButtons
+                  accentColor={accentColor}
+                  onReveal={() => setGateChoice('revealed')}
+                  onKeepSafe={() => setGateChoice('kept')}
+                />
+              )}
+            </div>
+
+            {isRevealed && (
+              <button
+                onClick={onGoDeeper}
+                className="mt-2 ml-1 font-['Crimson_Pro'] text-[13px] italic text-[#5a5540] hover:text-[#9a9070] transition-colors"
+              >
+                Go deeper →
+              </button>
+            )}
+          </div>
+        </div>
+
+        {isRevealed && msg.suggestions?.length > 0 && (
+          <div className="mt-3 ml-0 flex flex-wrap gap-2 max-w-[90%]">
+            {msg.suggestions.map((s, i) => (
+              <button
+                key={i}
+                onClick={() => onSuggestionTap(s)}
+                className="text-left font-['Crimson_Pro'] text-[14px] italic border rounded-[20px] px-3 py-1.5 transition-all duration-150"
+                style={{ color: '#9a9070', borderColor: '#2e2614' }}
+                onMouseEnter={e => {
+                  e.currentTarget.style.borderColor = accentColor
+                  e.currentTarget.style.color = accentColor
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.borderColor = '#2e2614'
+                  e.currentTarget.style.color = '#9a9070'
+                }}
+              >
+                {s}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+    )
+  }
+
+  // Normal assistant message
   return (
     <div className="mb-4 answer-fade">
       <div className="flex items-start gap-3">
@@ -375,17 +485,33 @@ export default function AskScreen({
       }
       const data = await res.json()
 
-      setMessages(prev => [
-        ...prev,
-        {
-          role: 'assistant',
-          content: data.answer,
-          badges: data.canon_badges || [],
-          spoilerSafe: data.spoiler_safe,
-          suggestions: data.suggestions || [],
-          confidence: data.confidence,
-        },
-      ])
+      if (data.spoiler_gated) {
+        setMessages(prev => [
+          ...prev,
+          {
+            role: 'assistant',
+            spoilerGated: true,
+            gatedMessage: data.gated_message,
+            gatedTier: data.gated_tier,
+            gatedAnswer: data.gated_answer,
+            badges: data.canon_badges || [],
+            suggestions: data.suggestions || [],
+            confidence: data.confidence,
+          },
+        ])
+      } else {
+        setMessages(prev => [
+          ...prev,
+          {
+            role: 'assistant',
+            content: data.answer,
+            badges: data.canon_badges || [],
+            spoilerSafe: data.spoiler_safe,
+            suggestions: data.suggestions || [],
+            confidence: data.confidence,
+          },
+        ])
+      }
     } catch (err) {
       const isNetworkErr = err instanceof TypeError && err.message.includes('fetch')
       const content = isNetworkErr

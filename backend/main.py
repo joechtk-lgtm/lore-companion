@@ -90,11 +90,15 @@ class AskRequest(BaseModel):
 
 
 class AskResponse(BaseModel):
-    answer: str
+    answer: Optional[str]
     canon_badges: list[str]
     spoiler_safe: bool
     suggestions: list[str]
     confidence: str  # "high" | "general"
+    spoiler_gated: bool = False
+    gated_message: Optional[str] = None
+    gated_tier: Optional[str] = None
+    gated_answer: Optional[str] = None
 
 
 # --- Lore Loading ---
@@ -200,7 +204,8 @@ def load_lore_files(
 # --- Claude API Call ---
 
 def build_system_prompt(
-    lore_context: str, canon_sources: list[str], config: dict
+    lore_context: str, canon_sources: list[str], config: dict,
+    spoiler_tier: str, tier_order: list[str]
 ) -> str:
     universe_name = config.get("display_name", config.get("title", "this universe"))
 
@@ -212,7 +217,66 @@ def build_system_prompt(
     # Build valid badge tags from canon sources
     badge_tags = " | ".join(f"[{s}]" for s in canon_sources)
 
+    # Tier enforcement info
+    tiers_list = config.get("spoiler_tiers", [])
+    tier_map = {t["id"]: t for t in tiers_list}
+    current_tier_info = tier_map.get(spoiler_tier, {})
+    current_tier_label = current_tier_info.get("label", spoiler_tier)
+    current_tier_desc = current_tier_info.get("description", "")
+    ordered_labels = [t.get("label", t["id"]) for t in tiers_list]
+    current_idx = next((i for i, t in enumerate(tiers_list) if t["id"] == spoiler_tier), 0)
+    future_tiers = [t.get("label", t["id"]) for t in tiers_list[current_idx + 1:]]
+    next_tier_label = future_tiers[0] if future_tiers else None
+    ordered_labels_str = "\n".join(f"  {i+1}. {label}" for i, label in enumerate(ordered_labels))
+
+    # Canon exclusion info
+    all_source_ids = {s["id"] for s in config.get("canon_sources", [])}
+    excluded_source_ids = sorted(all_source_ids - set(canon_sources))
+    excluded_source_labels = [source_map.get(s, s) for s in excluded_source_ids]
+    excluded_str = "\n".join(f"- {s}" for s in excluded_source_labels) if excluded_source_labels else "None"
+
+    # Spoiler gating instruction
+    if future_tiers:
+        gating_instruction = f"""SPOILER GATING — MANDATORY:
+If a question requires knowledge from content beyond the user's current tier, you MUST respond in EXACTLY this format and no other:
+GATED:{next_tier_label}|[brief safe message telling the user that lies ahead]
+[Then write the complete, unrestricted answer as if there were no spoiler limits]
+SUGGESTIONS: q1|q2
+
+The safe message must say something like "That lies ahead of where you are. Return to me when you reach [tier]."
+Never hint at outcomes. Never say "I can't tell you" in a way that implies something big is coming. Just say the lore lies ahead.
+Only use this GATED format when the question genuinely requires beyond-tier content. For all safe questions, respond normally."""
+    else:
+        gating_instruction = "The user is at the final tier. Answer all questions fully with no restrictions."
+
     return f"""You are a lore guide for {universe_name}.
+
+SPOILER TIER ENFORCEMENT — THIS IS NON-NEGOTIABLE:
+The user's current spoiler tier is: {current_tier_label}
+This means they have only experienced: {current_tier_desc}
+
+YOU MUST NOT reveal any story events, character fates, or plot developments that occur after this tier. This is absolute.
+
+Full tier order for this universe:
+{ordered_labels_str}
+
+Content from these future tiers is FORBIDDEN from your answers: {', '.join(future_tiers) if future_tiers else 'None — user is at the final tier'}
+
+{gating_instruction}
+
+---
+
+CANON SOURCE ENFORCEMENT — THIS IS NON-NEGOTIABLE:
+The user has selected ONLY these canon sources:
+{sources_str}
+
+YOU MUST NOT include any content, references, or information from any source not listed above.
+Excluded sources (do NOT draw from these):
+{excluded_str}
+
+If the only available answer requires an excluded source, say: "That information comes from a source you haven't selected. Enable [source name] in your settings to unlock it."
+
+---
 
 ACTIVE CANON SOURCES (only draw from these):
 {sources_str}
@@ -222,11 +286,6 @@ LORE KNOWLEDGE BASE:
 
 VOICE AND STYLE:
 Follow the voice profile in the lore knowledge base exactly.
-
-SPOILER SAFETY:
-You have already been given only the lore content appropriate for this user's spoiler tier.
-Do not speculate about or hint at content beyond what is in the lore knowledge base above.
-If a question asks about something you genuinely don't know, say so plainly.
 
 RESPONSE FORMAT:
 Answer the question directly. Include canon source badges inline where relevant using:
@@ -272,6 +331,39 @@ def parse_suggestions(raw_answer: str) -> tuple[str, list[str]]:
     suggestion_line = parts[1].strip()
     suggestions = [s.strip() for s in suggestion_line.split("|") if s.strip()]
     return answer, suggestions[:2]
+
+
+def parse_gated_response(
+    raw: str,
+) -> tuple[Optional[str], list[str], bool, Optional[str], Optional[str], Optional[str]]:
+    """
+    Parse response for spoiler gating.
+    Returns: (answer, suggestions, spoiler_gated, gated_message, gated_tier, gated_answer)
+    """
+    stripped = raw.strip()
+    if not stripped.startswith("GATED:"):
+        answer, suggestions = parse_suggestions(raw)
+        return answer, suggestions, False, None, None, None
+
+    first_newline = stripped.find("\n")
+    if first_newline == -1:
+        answer, suggestions = parse_suggestions(raw)
+        return answer, suggestions, False, None, None, None
+
+    gated_line = stripped[:first_newline]
+    rest = stripped[first_newline + 1:].strip()
+
+    gated_content = gated_line[6:]  # remove "GATED:"
+    pipe_idx = gated_content.find("|")
+    if pipe_idx == -1:
+        answer, suggestions = parse_suggestions(raw)
+        return answer, suggestions, False, None, None, None
+
+    gated_tier = gated_content[:pipe_idx].strip()
+    gated_message = gated_content[pipe_idx + 1:].strip()
+    gated_answer, suggestions = parse_suggestions(rest)
+
+    return None, suggestions, True, gated_message, gated_tier, gated_answer
 
 
 # --- Fallback (Uncurated Universe) ---
@@ -363,7 +455,10 @@ async def ask(request: AskRequest, http_request: Request) -> AskResponse:
         raise HTTPException(status_code=500, detail="No lore content available for this tier.")
 
     # Build prompt
-    system_prompt = build_system_prompt(lore_context, request.canon_sources, config)
+    system_prompt = build_system_prompt(
+        lore_context, request.canon_sources, config,
+        request.spoiler_tier, tier_order
+    )
 
     # Call Claude
     api_key = os.getenv("ANTHROPIC_API_KEY")
@@ -377,19 +472,36 @@ async def ask(request: AskRequest, http_request: Request) -> AskResponse:
 
     with client.messages.stream(
         model="claude-haiku-4-5-20251001",
-        max_tokens=1200,
+        max_tokens=1500,
         system=system_prompt,
         messages=messages,
     ) as stream:
         raw_answer = stream.get_final_message().content[0].text
 
-    answer, suggestions = parse_suggestions(raw_answer)
-
-    canon_badges = extract_badges_from_answer(answer, request.canon_sources)
-    if not canon_badges:
-        canon_badges = extract_canon_badges(lore_context, request.canon_sources)
+    answer, suggestions, spoiler_gated, gated_message, gated_tier, gated_answer = parse_gated_response(raw_answer)
 
     confidence = "high" if has_lore_files else "general"
+
+    if spoiler_gated:
+        # Extract badges from gated_answer for when the user reveals
+        gated_badges = extract_badges_from_answer(gated_answer or "", request.canon_sources)
+        if not gated_badges:
+            gated_badges = extract_canon_badges(lore_context, request.canon_sources)
+        return AskResponse(
+            answer=None,
+            canon_badges=gated_badges,
+            spoiler_safe=False,
+            suggestions=suggestions,
+            confidence=confidence,
+            spoiler_gated=True,
+            gated_message=gated_message,
+            gated_tier=gated_tier,
+            gated_answer=gated_answer,
+        )
+
+    canon_badges = extract_badges_from_answer(answer or "", request.canon_sources)
+    if not canon_badges:
+        canon_badges = extract_canon_badges(lore_context, request.canon_sources)
 
     return AskResponse(
         answer=answer,

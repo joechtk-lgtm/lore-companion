@@ -12,7 +12,7 @@ function BackArrow({ onClick }) {
 
 export default function SpoilerTier({ universe, initialTier, onBack, onContinue }) {
   const { tiers, accentColor, enterLabel } = universe
-  const [selected, setSelected] = useState(initialTier || tiers[1]?.id || tiers[0].id)
+  const [selected, setSelected] = useState(initialTier || universe.defaultTier || tiers[1]?.id || tiers[0].id)
 
   return (
     <div className="screen-enter flex flex-col min-h-screen px-5 py-10">
