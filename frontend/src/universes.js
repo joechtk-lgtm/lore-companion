@@ -1,7 +1,7 @@
 export const UNIVERSES = {
   witcher3: {
     id: 'witcher3',
-    title: 'THE WITCHER 3',
+    title: 'THE WITCHER',
     subtitle: 'The Continent. The Wild Hunt. The Shattering of Lives.',
     tags: ['Characters', 'Factions', 'Lore'],
     accentColor: '#c9a84c',

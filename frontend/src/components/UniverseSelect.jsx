@@ -9,12 +9,85 @@ function Diamond({ color = '#c9a84c' }) {
   )
 }
 
+const UNIVERSE_ICONS = {
+  witcher3: (color) => (
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+      {/* Ears */}
+      <rect x="4" y="0" width="7" height="10" fill={color}/>
+      <rect x="21" y="0" width="7" height="10" fill={color}/>
+      {/* Head */}
+      <rect x="4" y="7" width="24" height="14" fill={color}/>
+      {/* Snout */}
+      <rect x="9" y="19" width="14" height="8" fill={color}/>
+      {/* Eyes */}
+      <rect x="8" y="11" width="5" height="5" fill="rgba(0,0,0,0.55)"/>
+      <rect x="19" y="11" width="5" height="5" fill="rgba(0,0,0,0.55)"/>
+    </svg>
+  ),
+  eldenring: (color) => (
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+      {/* Trunk */}
+      <rect x="14" y="18" width="4" height="14" fill={color}/>
+      {/* Top spire */}
+      <rect x="15" y="0" width="2" height="10" fill={color}/>
+      {/* Main foliage */}
+      <rect x="10" y="8" width="12" height="12" fill={color}/>
+      {/* Left drooping branch */}
+      <rect x="2" y="15" width="10" height="3" fill={color}/>
+      <rect x="2" y="18" width="5" height="3" fill={color}/>
+      {/* Right drooping branch */}
+      <rect x="20" y="15" width="10" height="3" fill={color}/>
+      <rect x="25" y="18" width="5" height="3" fill={color}/>
+    </svg>
+  ),
+  dune: (color) => (
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+      {/* Worm body segments in an arc */}
+      <rect x="0" y="20" width="8" height="7" fill={color}/>
+      <rect x="6" y="13" width="8" height="7" fill={color}/>
+      <rect x="12" y="8" width="8" height="7" fill={color}/>
+      <rect x="18" y="13" width="8" height="7" fill={color}/>
+      <rect x="24" y="20" width="8" height="7" fill={color}/>
+      {/* Sand surface line */}
+      <rect x="0" y="27" width="32" height="2" fill={`${color}55`}/>
+    </svg>
+  ),
+  lotr: (color) => (
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+      {/* Ring — top and bottom */}
+      <rect x="9" y="2" width="14" height="5" fill={color}/>
+      <rect x="9" y="25" width="14" height="5" fill={color}/>
+      {/* Ring — left and right */}
+      <rect x="2" y="9" width="5" height="14" fill={color}/>
+      <rect x="25" y="9" width="5" height="14" fill={color}/>
+      {/* Ring — four corners */}
+      <rect x="5" y="5" width="6" height="6" fill={color}/>
+      <rect x="21" y="5" width="6" height="6" fill={color}/>
+      <rect x="5" y="21" width="6" height="6" fill={color}/>
+      <rect x="21" y="21" width="6" height="6" fill={color}/>
+    </svg>
+  ),
+  got: (color) => (
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+      {/* Crown base band */}
+      <rect x="2" y="19" width="28" height="9" fill={color}/>
+      {/* Left prong */}
+      <rect x="4" y="8" width="6" height="13" fill={color}/>
+      {/* Center prong (tallest) */}
+      <rect x="13" y="3" width="6" height="18" fill={color}/>
+      {/* Right prong */}
+      <rect x="22" y="8" width="6" height="13" fill={color}/>
+    </svg>
+  ),
+}
+
 function UniverseCard({ universe, isSelected, onClick }) {
   const accent = universe.accentColor
+  const icon = UNIVERSE_ICONS[universe.id]
   return (
     <button
       onClick={onClick}
-      className={`text-left rounded-[14px] p-5 border transition-all duration-200 w-full
+      className={`relative text-left rounded-[14px] p-5 border transition-all duration-200 w-full
         ${isSelected
           ? 'bg-[#16130a] border-current'
           : 'bg-[#111009] border-[#2e2614]'
@@ -22,13 +95,18 @@ function UniverseCard({ universe, isSelected, onClick }) {
       `}
       style={isSelected ? { borderColor: accent } : {}}
     >
+      {icon && (
+        <div className="absolute top-4 right-4 opacity-35 pointer-events-none">
+          {icon(accent)}
+        </div>
+      )}
       <div
-        className="font-['Cinzel'] text-[10px] tracking-[0.18em] mb-2"
+        className="font-['Cinzel'] text-[10px] tracking-[0.18em] mb-2 pr-10"
         style={{ color: accent }}
       >
         {universe.title}
       </div>
-      <p className="font-['Crimson_Pro'] text-[13px] italic text-[#5a5540] leading-snug mb-3">
+      <p className="font-['Crimson_Pro'] text-[13px] italic text-[#5a5540] leading-snug mb-3 pr-10">
         {universe.subtitle}
       </p>
       <div className="flex flex-wrap gap-1.5">
@@ -69,10 +147,10 @@ export default function UniverseSelect({
           LORE COMPANION
         </div>
         <h1 className="stagger-1 font-['Cinzel'] text-2xl font-semibold text-[#e8dfc0] leading-tight mb-2">
-          Choose your<br />world.
+          Choose your world.
         </h1>
-        <p className="stagger-2 font-['Crimson_Pro'] text-[17px] text-[#9a9070] leading-relaxed">
-          Every universe has its own lore, its own rules.
+        <p className="stagger-2 font-['Crimson_Pro'] text-[17px] italic text-[#5a5540] leading-relaxed">
+          Select a universe to explore its lore, characters, and history.
         </p>
       </div>
 
