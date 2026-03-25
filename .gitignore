@@ -1,1 +1,9 @@
 .env
+.env.*
+.claude/
+__pycache__/
+*.pyc
+.venv/
+build/
+.pytest_cache/
+.DS_Store
