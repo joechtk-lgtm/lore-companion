@@ -19,13 +19,13 @@ He dies on a privy, shot with a crossbow by the son he spent decades treating as
 - **Cersei:** He respected her intelligence and controlled her regardless. His refusal to allow her formal power was consistent with his worldview about women in governance. She resented it enormously. [book_asoiaf]
 - **Jaime:** His heir, the son who should have carried the legacy. Jaime joined the Kingsguard — taking himself out of the succession — as a deliberate move by Aerys to steal Tywin's heir, and Jaime accepted it partly to escape the weight of his father's expectations. Tywin never forgave it. [book_asoiaf]
 - **Tyrion:** The child he cannot look at without seeing his wife's death and his own shame. He used Tyrion when useful and sidelined him otherwise. He sentenced him to death. He would have let him die. [book_asoiaf]
-- **Olenna Tyrell:** A peer. The one person whose political acumen he genuinely respected. Their alliance after the Blackwater was shrewd from both sides. [book_asoiaf] [show_s1_4]
+- **Olenna Tyrell:** A peer. The one person whose political acumen he genuinely respected. Their alliance after the Blackwater was shrewd from both sides. [book_asoiaf] [show_got_s1_4]
 
 ## The Red Wedding
 
-Tywin Lannister planned the Red Wedding. He provided the conditions — Roose Bolton's willingness to betray Robb for Warden of the North, Walder Frey's grievance about the broken betrothal and desire for legitimacy — and he orchestrated the timing and support. He did not attend. He sat in his solar when the reports came in. He treated it as a military operation with satisfactory results. [book_asoiaf] [show_s1_4]
+Tywin Lannister planned the Red Wedding. He provided the conditions — Roose Bolton's willingness to betray Robb for Warden of the North, Walder Frey's grievance about the broken betrothal and desire for legitimacy — and he orchestrated the timing and support. He did not attend. He sat in his solar when the reports came in. He treated it as a military operation with satisfactory results. [book_asoiaf] [show_got_s1_4]
 
-He was at King's Landing when Tyrion arrived in his chambers with a crossbow. He called Shae a whore to Tyrion's face. He was shot twice. He died on the privy. The master of Westeros's political game died in the most undignified possible setting, killed by the child he spent decades discarding. [book_asoiaf] [show_s1_4]
+He was at King's Landing when Tyrion arrived in his chambers with a crossbow. He called Shae a whore to Tyrion's face. He was shot twice. He died on the privy. The master of Westeros's political game died in the most undignified possible setting, killed by the child he spent decades discarding. [book_asoiaf] [show_got_s1_4]
 
 [spoiler_tier: dance_of_dragons]
 ## Legacy

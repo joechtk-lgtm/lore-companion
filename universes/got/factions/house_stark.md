@@ -26,20 +26,20 @@ The north is different from the south. It is larger, colder, more sparsely popul
 
 After Ned's execution, Robb Stark raised his banners and marched south. He was seventeen. He won every battle he fought, including capturing Jaime Lannister at the Whispering Wood. The lords of the north and the Riverlands declared him King in the North, the first King in the North since Torrhen Stark knelt to Aegon three hundred years before.
 
-He could win battles. He could not navigate court politics. His decision to marry Jeyne Westerling (books) / Talisa Maegyr (show) broke his marriage pact with the Freys and gave Tywin Lannister the opening he needed. [book_asoiaf] [show_s1_4]
+He could win battles. He could not navigate court politics. His decision to marry Jeyne Westerling (books) / Talisa Maegyr (show) broke his marriage pact with the Freys and gave Tywin Lannister the opening he needed. [book_asoiaf] [show_got_s1_4]
 
 [spoiler_tier: red_wedding]
 ## The Red Wedding
 
 Robb Stark was murdered at the Twins by Walder Frey's men, having attended a wedding to repair the broken alliance. His mother Catelyn Tully was murdered alongside him. His direwolf Grey Wind was killed in his pen. The northern army was slaughtered.
 
-The north was left headless. The Starks were believed either dead or scattered. Roose Bolton was named Warden of the North. The great House Stark had been extinguished, or so it appeared. [book_asoiaf] [show_s1_4]
+The north was left headless. The Starks were believed either dead or scattered. Roose Bolton was named Warden of the North. The great House Stark had been extinguished, or so it appeared. [book_asoiaf] [show_got_s1_4]
 
 "The north remembers." The phrase became a rallying point for those who had not forgotten what was done to the Starks.
 
 [spoiler_tier: show_complete]
 ## Reclamation
 
-In the show, Jon and Sansa retook Winterfell from the Boltons with Wildling forces and the Knights of the Vale. The surviving Stark children — Jon, Sansa, Arya, Bran — were briefly reunited at Winterfell. After Daenerys's war and the destruction of King's Landing, Sansa refused to have the north as part of the new kingdom and was named Queen in the North. [show_s5_8]
+In the show, Jon and Sansa retook Winterfell from the Boltons with Wildling forces and the Knights of the Vale. The surviving Stark children — Jon, Sansa, Arya, Bran — were briefly reunited at Winterfell. After Daenerys's war and the destruction of King's Landing, Sansa refused to have the north as part of the new kingdom and was named Queen in the North. [show_got_s5_8]
 
 The direwolf flies again over Winterfell.

@@ -10,7 +10,7 @@ The throne cuts those who sit on it. This is not a metaphor. The jagged sword-po
 
 - **Construction:** Aegon I's blacksmiths spent two months working with the swords of his defeated enemies, with Balerion adding heat. The throne is roughly forty feet tall at its highest points — a mass of swords, some still recognizable as weapons, some fused into abstract shapes. [book_asoiaf]
 - **Location:** The throne room of the Red Keep, King's Landing. A long hall with cold stone floors and rows of pillars. The throne sits on a raised dais at its end. [book_asoiaf]
-- **Who has sat on it:** Every Targaryen king from Aegon I to Aerys II, then Robert Baratheon, then Joffrey, then Tommen, then Cersei, then (briefly) Daenerys (who never formally sat on it before dying), then — in the show — no one, after Drogon melted it. [book_asoiaf] [show_s5_8]
+- **Who has sat on it:** Every Targaryen king from Aegon I to Aerys II, then Robert Baratheon, then Joffrey, then Tommen, then Cersei, then (briefly) Daenerys (who never formally sat on it before dying), then — in the show — no one, after Drogon melted it. [book_asoiaf] [show_got_s5_8]
 
 ## What It Represents
 
@@ -21,13 +21,13 @@ Tyrion once said that Joffrey would be an excellent king if he had enough wars t
 [spoiler_tier: war_of_five_kings]
 ## Five Kings, One Throne
 
-The War of the Five Kings is the story's central political crisis, and the Iron Throne is what five men (Joffrey, Robb, Stannis, Renly, Balon) variously claimed or fought over. Joffrey sat on it. The others fought to take it from him. At the war's end, Joffrey was dead, but his brother Tommen sat in his place and the Lannisters still held the throne. [book_asoiaf] [show_s1_4]
+The War of the Five Kings is the story's central political crisis, and the Iron Throne is what five men (Joffrey, Robb, Stannis, Renly, Balon) variously claimed or fought over. Joffrey sat on it. The others fought to take it from him. At the war's end, Joffrey was dead, but his brother Tommen sat in his place and the Lannisters still held the throne. [book_asoiaf] [show_got_s1_4]
 
 [spoiler_tier: show_complete]
 ## The Destruction of the Throne
 
 After Daenerys's death, Drogon melted the Iron Throne with dragonfire. Not Jon, not the new rulers — the dragon, her partner, who had flown her to King's Landing and watched her die there. He melted the object that had consumed her and her family's history, and then flew away with her body.
 
-The realm's council met afterward in a room with no throne, choosing a king through deliberation rather than force. Bran Stark was chosen. The absence of the throne in that scene is pointed. Whether it will be rebuilt is not addressed. [show_s5_8]
+The realm's council met afterward in a room with no throne, choosing a king through deliberation rather than force. Bran Stark was chosen. The absence of the throne in that scene is pointed. Whether it will be rebuilt is not addressed. [show_got_s5_8]
 
 In the books, the throne still exists. Whether it will be melted by dragons, broken by weight of history, or preserved as the symbol it has always been is unknown.

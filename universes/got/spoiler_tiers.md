@@ -13,7 +13,7 @@ Book 3 (A Storm of Swords) / Show Season 3. Covers through the Red Wedding and i
 Books 4–5 / Show Seasons 4–6. Covers through Daenerys crossing to Westeros (show) / end of A Dance with Dragons (books). The Purple Wedding, Tyrion's trial and flight, Cersei's consolidation of power, Jon's Lord Commander arc and assassination, Daenerys in Meereen. Note: in the books, Daenerys has not yet crossed to Westeros by the end of published material (A Dance with Dragons, 2011).
 
 ## show_complete — All Eight Seasons
-All eight seasons of the HBO show watched. The Battle of Winterfell, the burning of King's Landing, Daenerys's death, Bran as king. This tier covers material that goes significantly beyond the published books. Show content from seasons 5–8 is always labeled [show_s5_8] and does not represent confirmed book canon.
+All eight seasons of the HBO show watched. The Battle of Winterfell, the burning of King's Landing, Daenerys's death, Bran as king. This tier covers material that goes significantly beyond the published books. Show content from seasons 5–8 is always labeled [show_got_s5_8] and does not represent confirmed book canon.
 
 ## everything — No Limits
 All published books included: A Song of Ice and Fire (all five novels), Fire & Blood, The World of Ice and Fire, The Dunk and Egg novellas. The deepest lore, the oldest history, the full picture of Westeros across thousands of years. Includes material from Fire & Blood about the Dance of the Dragons and Targaryen history.

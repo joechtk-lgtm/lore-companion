@@ -15,22 +15,22 @@ Petyr Baelish was born the heir of a minor, barely noble house — a tiny finger
 ## Relationships
 
 - **Catelyn Tully:** The fixed point of his psychology. He loved her as a boy and transferred the obsession to Sansa when Catelyn died. His actions — the war, the betrayals, everything — trace back to a refusal to accept that she chose a Stark over him at age fifteen. [book_asoiaf]
-- **Lysa Tully:** He manipulated Lysa for years, eventually marrying her for access to the Vale. He had her poison Jon Arryn (her own husband) at his direction. He pushed her through the Moon Door when she threatened Sansa. [book_asoiaf] [show_s1_4]
-- **Sansa:** His obsession transferred. He sees Catelyn when he looks at her. His protection of her is genuine in its way — and that is precisely the danger. [book_asoiaf] [show_s1_4]
+- **Lysa Tully:** He manipulated Lysa for years, eventually marrying her for access to the Vale. He had her poison Jon Arryn (her own husband) at his direction. He pushed her through the Moon Door when she threatened Sansa. [book_asoiaf] [show_got_s1_4]
+- **Sansa:** His obsession transferred. He sees Catelyn when he looks at her. His protection of her is genuine in its way — and that is precisely the danger. [book_asoiaf] [show_got_s1_4]
 - **Varys:** His counterpart and occasional rival. Both run information networks; both have true allegiances obscure to most. They dislike each other as only people with similar skill sets and opposed values can. [book_asoiaf]
 
 ## The Author of the War
 
 Jon Arryn did not die of natural causes. He died because Petyr Baelish gave Lysa Arryn the poison and told her to put it in Jon's wine. Jon had been investigating Joffrey's parentage and was about to reveal it. Littlefinger removed the threat and then pointed the blame at the Lannisters — a letter from Lysa to Catelyn, sent to Winterfell, saying "the Lannisters killed Jon Arryn." This letter is the first domino. Ned's mission to King's Landing, the discovery of Joffrey's parentage, the war — all of it flows from a lie Littlefinger planted. [book_asoiaf]
 
-He also betrayed Ned Stark at the critical moment — the gold cloaks Ned believed he had purchased turned on him when Littlefinger gave the order. "I warned you not to trust me," he told Ned. He did. He had. [book_asoiaf] [show_s1_4]
+He also betrayed Ned Stark at the critical moment — the gold cloaks Ned believed he had purchased turned on him when Littlefinger gave the order. "I warned you not to trust me," he told Ned. He did. He had. [book_asoiaf] [show_got_s1_4]
 
 [spoiler_tier: red_wedding]
 ## The Purple Wedding and Sansa's Escape
 
-He provided the strangler poison to Olenna Tyrell, who deployed it through Sansa's hairnet. He arranged Sansa's escape with Ser Dontos. He killed Dontos when he had served his purpose. He brought Sansa to the Vale and began the next phase of his plan — control of the Vale through Lysa, and control of Lysa through Sansa's presence and his own manipulation. [book_asoiaf] [show_s1_4]
+He provided the strangler poison to Olenna Tyrell, who deployed it through Sansa's hairnet. He arranged Sansa's escape with Ser Dontos. He killed Dontos when he had served his purpose. He brought Sansa to the Vale and began the next phase of his plan — control of the Vale through Lysa, and control of Lysa through Sansa's presence and his own manipulation. [book_asoiaf] [show_got_s1_4]
 
-Lysa became jealous. He pushed her through the Moon Door. He told the lords of the Vale that she jumped. Sansa backed the lie. He now controls the Vale. [book_asoiaf] [show_s1_4]
+Lysa became jealous. He pushed her through the Moon Door. He told the lords of the Vale that she jumped. Sansa backed the lie. He now controls the Vale. [book_asoiaf] [show_got_s1_4]
 
 [spoiler_tier: dance_of_dragons]
 ## The Game's Long Play
@@ -42,6 +42,6 @@ His arc in the books is unresolved at the end of AFFC/ADwD. He is alive, ascenda
 [spoiler_tier: show_complete]
 ## Death in Winterfell
 
-In the show, Littlefinger followed Sansa to Winterfell and attempted to drive a wedge between her and Arya. Sansa and Arya had been working together to observe him. Bran provided evidence of his crimes (from his greenvisions). Sansa held a public trial; Arya delivered the sentence. He died on his knees, throat cut, trying to appeal to his love for Catelyn at the end. [show_s5_8]
+In the show, Littlefinger followed Sansa to Winterfell and attempted to drive a wedge between her and Arya. Sansa and Arya had been working together to observe him. Bran provided evidence of his crimes (from his greenvisions). Sansa held a public trial; Arya delivered the sentence. He died on his knees, throat cut, trying to appeal to his love for Catelyn at the end. [show_got_s5_8]
 
 The book arc for Littlefinger is unresolved. He is alive in the published text and represents one of the most active threats to any stable resolution.

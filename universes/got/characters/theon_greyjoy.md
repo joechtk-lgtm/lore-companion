@@ -23,7 +23,7 @@ Theon Greyjoy is a man who never belonged anywhere. He was taken from the Iron I
 
 Theon returned to Pyke to propose an alliance between Robb Stark's rebellion and the Iron Islands, hoping to use his connections to win Ironborn ships for the cause. Balon refused and declared his own independence. He gave Theon's command to Yara and sent Theon to take small fishing villages on the coast. Theon, desperate to prove himself, pivoted. He attacked Winterfell — lightly defended — with a small force and took it.
 
-He held it for a time. Maester Luwin counseled surrender. Theon knew he couldn't hold it but couldn't admit he'd made a mistake. He faked the execution of two boys (actually miller's sons) as Bran and Rickon. He was betrayed by his own men to Ramsay Bolton's forces, who had arrived to take the castle. Ramsay burned Winterfell and took Theon captive. [book_asoiaf] [show_s1_4]
+He held it for a time. Maester Luwin counseled surrender. Theon knew he couldn't hold it but couldn't admit he'd made a mistake. He faked the execution of two boys (actually miller's sons) as Bran and Rickon. He was betrayed by his own men to Ramsay Bolton's forces, who had arrived to take the castle. Ramsay burned Winterfell and took Theon captive. [book_asoiaf] [show_got_s1_4]
 
 [spoiler_tier: red_wedding]
 ## Reek
@@ -35,13 +35,13 @@ Ramsay Bolton tortured Theon systematically — not for information but for the 
 
 In the books, Theon was used by Ramsay to legitimize his claim through the "Arya" marriage — he stood at the wedding (it was Jeyne Poole pretending to be Arya, not the real Arya [book_asoiaf]). He eventually began to reassemble himself when Bran's old friend Mance Rayder arrived (disguised) and helped rescue "Arya." Theon jumped from the walls of Winterfell with her, into the snow. He began to be Theon again. [book_asoiaf]
 
-In the show, the equivalent arc involved the real Sansa (not Jeyne Poole) and ended with Theon and Sansa jumping from the walls together. The show condensed and modified the details considerably. [show_s5_8]
+In the show, the equivalent arc involved the real Sansa (not Jeyne Poole) and ended with Theon and Sansa jumping from the walls together. The show condensed and modified the details considerably. [show_got_s5_8]
 
-He returned to the Iron Islands. Balon was dead (killed by Euron Greyjoy, his brother). He supported Yara's claim in the kingsmoot and lost to Euron. He and Yara fled with the best ships and allied with Daenerys. [show_s5_8]
+He returned to the Iron Islands. Balon was dead (killed by Euron Greyjoy, his brother). He supported Yara's claim in the kingsmoot and lost to Euron. He and Yara fled with the best ships and allied with Daenerys. [show_got_s5_8]
 
 [spoiler_tier: show_complete]
 ## Death at Winterfell
 
-Theon escorted Bran to the godswood during the Battle of Winterfell as a decoy for the Night King. He charged the Night King alone when all hope seemed lost. The Night King caught his spear. Arya killed the Night King before Theon died. He died in the godswood, Bran thanking him, a Stark and not quite a Stark to the end. [show_s5_8]
+Theon escorted Bran to the godswood during the Battle of Winterfell as a decoy for the Night King. He charged the Night King alone when all hope seemed lost. The Night King caught his spear. Arya killed the Night King before Theon died. He died in the godswood, Bran thanking him, a Stark and not quite a Stark to the end. [show_got_s5_8]
 
 The book arc for Theon after his escape from Winterfell is unresolved.

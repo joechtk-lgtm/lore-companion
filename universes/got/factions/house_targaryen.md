@@ -24,7 +24,7 @@ King's Landing was built around the site of Aegon's landing. The Red Keep was bu
 [spoiler_tier: war_of_five_kings]
 ## The Last Dragons
 
-Daenerys Targaryen hatched three dragon eggs at Drogo's funeral pyre. Dragons had been absent from the world for over a century — the last Targaryen dragons were small, sickly things by the end, casualties of the Dance and the years after. Her dragons were the first in the world in living memory. They were also growing fast. [book_asoiaf] [show_s1_4]
+Daenerys Targaryen hatched three dragon eggs at Drogo's funeral pyre. Dragons had been absent from the world for over a century — the last Targaryen dragons were small, sickly things by the end, casualties of the Dance and the years after. Her dragons were the first in the world in living memory. They were also growing fast. [book_asoiaf] [show_got_s1_4]
 
 [spoiler_tier: everything]
 ## The Dance of the Dragons

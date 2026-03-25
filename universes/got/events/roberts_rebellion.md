@@ -22,7 +22,7 @@ Prince Rhaegar Targaryen abducted Lyanna Stark — Ned's sister, Robert's betrot
 [spoiler_tier: everything]
 ## The Truth
 
-Lyanna Stark was not abducted. She ran away with Rhaegar. She loved him. They were secretly married at the tower of joy — the show confirms this at the end of Season 6 [show_s5_8]; the books have accumulated this evidence strongly enough that "R+L=J" is the most accepted fan theory in the series' history. [book_asoiaf, widely theorized and confirmed by show_s5_8]
+Lyanna Stark was not abducted. She ran away with Rhaegar. She loved him. They were secretly married at the tower of joy — the show confirms this at the end of Season 6 [show_got_s5_8]; the books have accumulated this evidence strongly enough that "R+L=J" is the most accepted fan theory in the series' history. [book_asoiaf, widely theorized and confirmed by show_s5_8]
 
 Rhaegar's wife Elia Martell did not object to a plural marriage — Valyrian tradition and some Westerosi precedent (Aegon's two wives) made it legally arguable. The marriage was likely legal under Westerosi law if valid.
 

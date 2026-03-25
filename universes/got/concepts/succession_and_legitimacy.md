@@ -38,7 +38,7 @@ Jon Snow is Aegon Targaryen, the son of a secretly married Rhaegar Targaryen and
 
 This creates a succession crisis within the Targaryen "restoration": Daenerys is the claimant who did the work, built the army, crossed the sea, fought the wars. Jon is the person the law says should rule. The tension between earned claim (conquest, will, capacity) and inherited claim (blood, law) is exactly the tension the whole story has been tracing.
 
-The show resolves this by having Jon kill Daenerys rather than rule. The books have not reached this point. [show_s5_8]
+The show resolves this by having Jon kill Daenerys rather than rule. The books have not reached this point. [show_got_s5_8]
 
 ## The Dance of the Dragons as Precedent
 

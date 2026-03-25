@@ -13,9 +13,9 @@ For three hundred years, the Targaryens ruled Westeros because they had dragons 
 
 ## Daenerys's Three Dragons
 
-- **Drogon:** The largest, black with red markings, named for Khal Drogo. Daenerys's primary bond. Instinctively connected to her in a way the others are not — he is described as "the black beast" in the books, wild and large and difficult to control. When he appears in Meereen's fighting pit, something in him responds to her distress. [book_asoiaf] [show_s1_4]
-- **Rhaegal:** Green with bronze highlights, named for Rhaegar Targaryen. Bonded primarily to Jon Snow in the show [show_s5_8]. Killed by Euron Greyjoy's scorpion bolts in the show [show_s5_8]. Book status: still alive in published material. [book_asoiaf]
-- **Viserion:** Cream and gold, named for Viserys. Killed by the Night King beyond the Wall in the show [show_s5_8], reanimated as an ice dragon. Used to destroy the Wall. Book status: alive in published material. [book_asoiaf]
+- **Drogon:** The largest, black with red markings, named for Khal Drogo. Daenerys's primary bond. Instinctively connected to her in a way the others are not — he is described as "the black beast" in the books, wild and large and difficult to control. When he appears in Meereen's fighting pit, something in him responds to her distress. [book_asoiaf] [show_got_s1_4]
+- **Rhaegal:** Green with bronze highlights, named for Rhaegar Targaryen. Bonded primarily to Jon Snow in the show [show_got_s5_8]. Killed by Euron Greyjoy's scorpion bolts in the show [show_got_s5_8]. Book status: still alive in published material. [book_asoiaf]
+- **Viserion:** Cream and gold, named for Viserys. Killed by the Night King beyond the Wall in the show [show_got_s5_8], reanimated as an ice dragon. Used to destroy the Wall. Book status: alive in published material. [book_asoiaf]
 
 ## The History of Valyrian Dragonriding
 

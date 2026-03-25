@@ -22,7 +22,7 @@ Cersei Lannister is Queen of the Seven Kingdoms, then Queen Regent, then Queen i
 
 ## As Queen Regent
 
-After Robert's death and through Joffrey's reign, Cersei held actual power while Tyrion and later Tywin held the title of Hand. The conflict was constant. She undermined Tyrion at every turn; he outmaneuvered her more often than she acknowledged. After the Blackwater, Tywin took the Handship directly and marginalized her — she had authority as queen regent but found her father's presence limited it severely. [book_asoiaf] [show_s1_4]
+After Robert's death and through Joffrey's reign, Cersei held actual power while Tyrion and later Tywin held the title of Hand. The conflict was constant. She undermined Tyrion at every turn; he outmaneuvered her more often than she acknowledged. After the Blackwater, Tywin took the Handship directly and marginalized her — she had authority as queen regent but found her father's presence limited it severely. [book_asoiaf] [show_got_s1_4]
 
 [spoiler_tier: war_of_five_kings]
 ## The War's Management
@@ -32,22 +32,22 @@ Cersei's management of the war was competent in small things and disastrous in l
 [spoiler_tier: red_wedding]
 ## After the Red Wedding
 
-Tywin's brilliant alliance with the Freys and Boltons ended Robb Stark's war. Cersei benefited enormously but received none of the credit — Tywin distributed it to himself and his allies. Joffrey died at his own wedding. Tyrion was convicted. Tywin was killed by Tyrion. In a very short span, Cersei lost her father, her eldest child, and her most competent political ally. She began ruling alone. [book_asoiaf] [show_s1_4]
+Tywin's brilliant alliance with the Freys and Boltons ended Robb Stark's war. Cersei benefited enormously but received none of the credit — Tywin distributed it to himself and his allies. Joffrey died at his own wedding. Tyrion was convicted. Tywin was killed by Tyrion. In a very short span, Cersei lost her father, her eldest child, and her most competent political ally. She began ruling alone. [book_asoiaf] [show_got_s1_4]
 
 She did not rule well. She recalled Kevan Lannister and then alienated him. She relied on the Faith Militant without understanding what she was empowering. She played Margaery against Tommen's Tyrell loyalty and lost.
 
 [spoiler_tier: dance_of_dragons]
 ## The Faith Militant and the Walk of Shame
 
-Cersei, attempting to use the newly armed Faith Militant against the Tyrells, was outmaneuvered: the High Sparrow arrested Margaery for adultery — and then arrested Cersei for the same and for the incest with Jaime that had been an open secret. She was imprisoned in the Great Sept of Baelor and forced to confess. Her penance was the Walk of Shame: naked, shorn, walking through King's Landing while the crowd jeered. [book_asoiaf] [show_s5_8]
+Cersei, attempting to use the newly armed Faith Militant against the Tyrells, was outmaneuvered: the High Sparrow arrested Margaery for adultery — and then arrested Cersei for the same and for the incest with Jaime that had been an open secret. She was imprisoned in the Great Sept of Baelor and forced to confess. Her penance was the Walk of Shame: naked, shorn, walking through King's Landing while the crowd jeered. [book_asoiaf] [show_got_s5_8]
 
 It did not break her. It made her more dangerous. She emerged from it with the desire for revenge fully in control of her judgment. She began planning the use of the wildfire caches beneath the city. [book_asoiaf for this trajectory; show_s5_8 for execution]
 
 [spoiler_tier: show_complete]
 ## The Sept and the End
 
-Cersei destroyed the Sept of Baelor with wildfire, killing the High Sparrow, Margaery, Loras, Kevan Lannister, and hundreds of others. Tommen saw it from the window and stepped off the ledge. With her last child dead, she took the Iron Throne for herself, crowned queen without a king. [show_s5_8]
+Cersei destroyed the Sept of Baelor with wildfire, killing the High Sparrow, Margaery, Loras, Kevan Lannister, and hundreds of others. Tommen saw it from the window and stepped off the ledge. With her last child dead, she took the Iron Throne for herself, crowned queen without a king. [show_got_s5_8]
 
-She died in the collapse of the Red Keep during Daenerys's assault on King's Landing, buried under rubble beside Jaime, who had returned to be with her at the end. [show_s5_8]
+She died in the collapse of the Red Keep during Daenerys's assault on King's Landing, buried under rubble beside Jaime, who had returned to be with her at the end. [show_got_s5_8]
 
 The book arc for Cersei remains unresolved. The Winds of Winter chapters released show her facing the Faith Militant's trial by combat; her trajectory beyond that is unknown.

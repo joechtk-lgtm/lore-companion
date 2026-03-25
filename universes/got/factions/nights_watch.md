@@ -21,14 +21,14 @@ The Watch's founding purpose is defense against the Others — the White Walkers
 [spoiler_tier: war_of_five_kings]
 ## The Ranging Beyond the Wall
 
-Lord Commander Jeor Mormont led a ranging expedition beyond the Wall to investigate reports of Wildling mobilization and disappearances. What they found at the Fist of the First Men was wights — the dead raised by the Others — attacking in force. The ranging was nearly destroyed. Mormont and the survivors retreated to Craster's Keep, where Craster was killed and Mormont was murdered in the mutiny that followed. [book_asoiaf] [show_s1_4]
+Lord Commander Jeor Mormont led a ranging expedition beyond the Wall to investigate reports of Wildling mobilization and disappearances. What they found at the Fist of the First Men was wights — the dead raised by the Others — attacking in force. The ranging was nearly destroyed. Mormont and the survivors retreated to Craster's Keep, where Craster was killed and Mormont was murdered in the mutiny that followed. [book_asoiaf] [show_got_s1_4]
 
 The Watch returned to Castle Black with the news that the Others were real and active. No one outside the Wall wanted to hear it.
 
 [spoiler_tier: red_wedding]
 ## Battle of Castle Black
 
-Mance Rayder, King-Beyond-the-Wall, mobilized hundreds of thousands of Wildlings in a coordinated assault on the Wall — attacking simultaneously from beyond the Wall and from south of it (through the tunnel). The Watch, desperately undermanned, held Castle Black through a night's fighting. Jon Snow led the defense. [book_asoiaf] [show_s1_4]
+Mance Rayder, King-Beyond-the-Wall, mobilized hundreds of thousands of Wildlings in a coordinated assault on the Wall — attacking simultaneously from beyond the Wall and from south of it (through the tunnel). The Watch, desperately undermanned, held Castle Black through a night's fighting. Jon Snow led the defense. [book_asoiaf] [show_got_s1_4]
 
 Stannis Baratheon's army arrived and broke the assault.
 
@@ -39,4 +39,4 @@ Jon was elected Lord Commander. He opened the gates and let the surviving Wildli
 
 Jon's decision to bring the Wildlings through the Wall — combined with his plan to march on Winterfell to challenge Ramsay Bolton for Arya's sake — was the final rupture with the traditionalist Watch brothers. "For the Watch." Jon was stabbed repeatedly in the courtyard of Castle Black. [book_asoiaf] [show_s5_8 for specifics]
 
-In the show, Melisandre resurrected him. He executed the conspirators and declared his watch ended. The Night's Watch survived as an institution but was fundamentally broken — its purpose, its unity, its numbers all compromised. [show_s5_8]
+In the show, Melisandre resurrected him. He executed the conspirators and declared his watch ended. The Night's Watch survived as an institution but was fundamentally broken — its purpose, its unity, its numbers all compromised. [show_got_s5_8]

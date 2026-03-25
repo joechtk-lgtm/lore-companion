@@ -24,7 +24,7 @@ The Wall to the north from Castle Black's top: miles of forest, rivers, open lan
 [spoiler_tier: red_wedding]
 ## The Battle of Castle Black
 
-Mance Rayder's assault — coordinated from both sides of the Wall simultaneously — was the largest military attack on the Wall in living memory. Jon Snow led the defense from the top, then from the gate. The Watch held through the night. Stannis arrived and ended the assault. [book_asoiaf] [show_s1_4]
+Mance Rayder's assault — coordinated from both sides of the Wall simultaneously — was the largest military attack on the Wall in living memory. Jon Snow led the defense from the top, then from the gate. The Watch held through the night. Stannis arrived and ended the assault. [book_asoiaf] [show_got_s1_4]
 
 [spoiler_tier: dance_of_dragons]
 ## The Wall's Limits
@@ -34,6 +34,6 @@ The magic that makes the Wall effective is specific to the Others. It does not s
 [spoiler_tier: show_complete]
 ## The Fall
 
-The Night King rode Viserion — Daenerys's dragon, killed beyond the Wall and reanimated as an ice dragon — and destroyed the Wall at Eastwatch-by-the-Sea. The army of the dead walked south. [show_s5_8]
+The Night King rode Viserion — Daenerys's dragon, killed beyond the Wall and reanimated as an ice dragon — and destroyed the Wall at Eastwatch-by-the-Sea. The army of the dead walked south. [show_got_s5_8]
 
 In the books, the Wall still stands at the end of published material. Whether this specific event — or something equivalent — happens in the books is unknown. The Wall's fall is show canon only as of the current published state of the series.

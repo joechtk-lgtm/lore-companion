@@ -16,12 +16,12 @@ Varys is the Master of Whisperers on the Small Council, the man who knows everyt
 
 - **Illyrio Mopatis:** His partner since their days in Essos — a merchant prince of Pentos who sheltered Daenerys and Viserys. They have been working together for decades. [book_asoiaf]
 - **Littlefinger:** His counterpart. They dislike each other with the precision of men who understand exactly what the other is. [book_asoiaf]
-- **Tyrion:** He protected Tyrion, arranged his escape, accompanied him to Essos. The protection was partially affection and partially utility. [book_asoiaf] [show_s1_4]
-- **Ned Stark:** He tried to warn him. He was the one who advised Ned to confess, to take the black, to live. He understood what would happen. Ned did not take the advice in time. [book_asoiaf] [show_s1_4]
+- **Tyrion:** He protected Tyrion, arranged his escape, accompanied him to Essos. The protection was partially affection and partially utility. [book_asoiaf] [show_got_s1_4]
+- **Ned Stark:** He tried to warn him. He was the one who advised Ned to confess, to take the black, to live. He understood what would happen. Ned did not take the advice in time. [book_asoiaf] [show_got_s1_4]
 
 ## The Spider's Work
 
-Varys served Aerys II, then Robert Baratheon, then Joffrey/Cersei. He appeared to serve each king while actually maintaining the information advantage that allowed him to survive any transition. He told Ned that he served the realm. He intervened to prevent various cruelties when he could do so without exposing himself. He did not prevent Ned's execution, which he claims he could not have stopped — and which may be true, given Joffrey's defiance of his own advisors. [book_asoiaf] [show_s1_4]
+Varys served Aerys II, then Robert Baratheon, then Joffrey/Cersei. He appeared to serve each king while actually maintaining the information advantage that allowed him to survive any transition. He told Ned that he served the realm. He intervened to prevent various cruelties when he could do so without exposing himself. He did not prevent Ned's execution, which he claims he could not have stopped — and which may be true, given Joffrey's defiance of his own advisors. [book_asoiaf] [show_got_s1_4]
 
 [spoiler_tier: red_wedding]
 ## The True Allegiance
@@ -33,13 +33,13 @@ This "Young Griff" / fAegon plot is book-only. The show does not include this ch
 [spoiler_tier: dance_of_dragons]
 ## In the Show
 
-In the show, Varys's allegiance is to Daenerys after he accompanies Tyrion to Essos. He is her advisor. He eventually begins to doubt her after the burning of King's Landing — he is seen writing letters, apparently to warn lords of Jon's Targaryen claim as an alternative. Daenerys executes him for treason by dragonfire before the assault on King's Landing. [show_s5_8]
+In the show, Varys's allegiance is to Daenerys after he accompanies Tyrion to Essos. He is her advisor. He eventually begins to doubt her after the burning of King's Landing — he is seen writing letters, apparently to warn lords of Jon's Targaryen claim as an alternative. Daenerys executes him for treason by dragonfire before the assault on King's Landing. [show_got_s5_8]
 
 The show's version of Varys's arc is significantly compressed and his "fAegon" plot is absent. His death is earlier and more decisive than the books suggest for his equivalent moment.
 
 [spoiler_tier: show_complete]
 ## What He Was
 
-Varys was the character who most explicitly asked the question the series circles: what is power? Power is where men believe it resides. He told Tyrion this with a riddle: a king, a high priest, and a rich man each order a sellsword to kill the other two. Who lives? The sellsword decides. Power resides where men believe it resides. A shadow on the wall, yet shadows can kill. [book_asoiaf] [show_s1_4]
+Varys was the character who most explicitly asked the question the series circles: what is power? Power is where men believe it resides. He told Tyrion this with a riddle: a king, a high priest, and a rich man each order a sellsword to kill the other two. Who lives? The sellsword decides. Power resides where men believe it resides. A shadow on the wall, yet shadows can kill. [book_asoiaf] [show_got_s1_4]
 
 He was not wrong. He was also not as in control of his shadows as he believed.

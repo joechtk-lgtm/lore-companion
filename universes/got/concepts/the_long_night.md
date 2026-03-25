@@ -17,7 +17,7 @@ The Long Night is the founding catastrophe of Westerosi civilization — an even
 
 The children of the forest are an ancient non-human species who inhabited Westeros before the First Men arrived. They carved the faces into the weirwood trees. They fought the First Men, made a pact with them at the Isle of Faces, and largely retreated to their strongholds. During the Long Night, according to legend, the children fought alongside men against the Others.
 
-In the show, it is revealed that the children of the forest created the Others — they drove obsidian into the heart of a captured First Man at a weirwood tree, creating the first White Walker as a weapon against the First Men, who were cutting down the weirwoods. The weapon escaped their control. [show_s5_8]
+In the show, it is revealed that the children of the forest created the Others — they drove obsidian into the heart of a captured First Man at a weirwood tree, creating the first White Walker as a weapon against the First Men, who were cutting down the weirwoods. The weapon escaped their control. [show_got_s5_8]
 
 The books imply this origin but do not confirm it. The show's explicit version may or may not match what Martin has planned. [book_asoiaf — implied, show_s5_8 for explicit confirmation]
 
@@ -30,6 +30,6 @@ Melisandre believed Stannis was Azor Ahai reborn. She later believed Jon Snow mi
 [spoiler_tier: show_complete]
 ## The Second Long Night (Show)
 
-In the show, the second Long Night was averted at the Battle of Winterfell, when Arya Stark killed the Night King. The army of the dead collapsed. The threat ended. [show_s5_8]
+In the show, the second Long Night was averted at the Battle of Winterfell, when Arya Stark killed the Night King. The army of the dead collapsed. The threat ended. [show_got_s5_8]
 
 Whether the books treat this as a single climactic battle or as a longer, more complex conflict is unknown. The Winds of Winter and A Dream of Spring would need to be published to know. Martin has said the ending of the books will differ from the show's in certain ways; whether the White Walker threat ends differently is among the largest open questions.

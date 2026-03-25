@@ -20,12 +20,12 @@ House Lannister is the wealthiest house in Westeros, the dominant political powe
 **Jaime** — twin of Cersei, Kingsguard, Kingslayer, no inheritance by his vow.
 **Tyrion** — youngest, dwarf, disinherited in all but law, the most politically capable of the three.
 **Kevan Lannister** — Tywin's brother, the steady competent administrator who could have held things together after Tywin's death. Varys killed him. [book_asoiaf]
-**Lancel Lannister** — Cersei's cousin and former lover who joined the Sparrows. [book_asoiaf] [show_s1_4]
+**Lancel Lannister** — Cersei's cousin and former lover who joined the Sparrows. [book_asoiaf] [show_got_s1_4]
 
 [spoiler_tier: war_of_five_kings]
 ## The Dominance
 
-The Lannisters controlled the Iron Throne through Joffrey's reign. Tywin as Hand, Cersei as queen regent, the Tyrell alliance through Margaery's betrothal to Joffrey — they had overwhelming financial and military resources. The war against Robb Stark was expensive but sustainable. [book_asoiaf] [show_s1_4]
+The Lannisters controlled the Iron Throne through Joffrey's reign. Tywin as Hand, Cersei as queen regent, the Tyrell alliance through Margaery's betrothal to Joffrey — they had overwhelming financial and military resources. The war against Robb Stark was expensive but sustainable. [book_asoiaf] [show_got_s1_4]
 
 [spoiler_tier: red_wedding]
 ## After the Red Wedding
@@ -40,4 +40,4 @@ In the books, the Lannister power begins to hollow. The gold mines are running d
 [spoiler_tier: show_complete]
 ## The End of the Dynasty
 
-The Lannister line effectively ends in the show with Cersei and Jaime's deaths in the Red Keep. Tyrion survives as Hand of the new king. He is the last Lannister of any consequence, serving a Stark-Targaryen king. The Lannister legacy — Tywin's obsession — does not survive its architect by long. [show_s5_8]
+The Lannister line effectively ends in the show with Cersei and Jaime's deaths in the Red Keep. Tyrion survives as Hand of the new king. He is the last Lannister of any consequence, serving a Stark-Targaryen king. The Lannister legacy — Tywin's obsession — does not survive its architect by long. [show_got_s5_8]

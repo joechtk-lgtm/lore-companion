@@ -18,21 +18,21 @@ King's Landing is the capital of the Seven Kingdoms, seat of the Iron Throne, an
 
 This is critical and underappreciated context: beneath King's Landing, placed there by King Aerys II Targaryen during his descent into paranoia, are enormous caches of wildfire — the alchemists' green fire that cannot be extinguished by water, burns through stone and metal, and explodes under pressure. Aerys intended to burn the city rather than let Robert take it. Jaime killed him before he could give the order.
 
-The wildfire is still there. In the books, this is confirmed and treated as a significant threat. In the show, Cersei uses it to destroy the Sept of Baelor. [show_s5_8] The amount remaining beyond what was used is unknown. [book_asoiaf]
+The wildfire is still there. In the books, this is confirmed and treated as a significant threat. In the show, Cersei uses it to destroy the Sept of Baelor. [show_got_s5_8] The amount remaining beyond what was used is unknown. [book_asoiaf]
 
 [spoiler_tier: war_of_five_kings]
 ## The Siege
 
-Stannis Baratheon's assault on King's Landing — the Battle of the Blackwater — was the story's most significant military engagement in the first half. Tyrion's wildfire plan burned Stannis's fleet. The Tyrell-Lannister relief force broke the siege. The city held. [book_asoiaf] [show_s1_4]
+Stannis Baratheon's assault on King's Landing — the Battle of the Blackwater — was the story's most significant military engagement in the first half. Tyrion's wildfire plan burned Stannis's fleet. The Tyrell-Lannister relief force broke the siege. The city held. [book_asoiaf] [show_got_s1_4]
 
 [spoiler_tier: dance_of_dragons]
 ## Cersei's King's Landing
 
-Under Cersei's governance (post-Tywin), King's Landing became increasingly fractious. The Faith Militant was empowered. The Faith arrested both Margaery Tyrell and Cersei herself. The city existed in a state of armed religious tension that Cersei then used to her advantage. [book_asoiaf] [show_s5_8]
+Under Cersei's governance (post-Tywin), King's Landing became increasingly fractious. The Faith Militant was empowered. The Faith arrested both Margaery Tyrell and Cersei herself. The city existed in a state of armed religious tension that Cersei then used to her advantage. [book_asoiaf] [show_got_s5_8]
 
 [spoiler_tier: show_complete]
 ## The Burning
 
-Daenerys burned King's Landing even after its bells rang surrender. The Red Keep collapsed. Cersei and Jaime were buried in the ruins. The wildfire caches likely detonated as part of the conflagration. [show_s5_8]
+Daenerys burned King's Landing even after its bells rang surrender. The Red Keep collapsed. Cersei and Jaime were buried in the ruins. The wildfire caches likely detonated as part of the conflagration. [show_got_s5_8]
 
-The city survived in some form — Bran's council met in what remained afterward. But the burning of King's Landing was the act that defined Daenerys's arc in the show and led directly to Jon's decision. [show_s5_8]
+The city survived in some form — Bran's council met in what remained afterward. But the burning of King's Landing was the act that defined Daenerys's arc in the show and led directly to Jon's decision. [show_got_s5_8]

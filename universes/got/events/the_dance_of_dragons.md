@@ -30,7 +30,7 @@ The realm divided. [book_fire_blood]
 
 ## Significance to the Main Story
 
-**The parallel:** The Dance of the Dragons is explicitly echoed in the main story — Daenerys as Rhaenyra (female claimant with dragons, rightful by some interpretations) against Cersei (the occupying power). In the show, both die. The Iron Throne is melted. The Dance's lesson — that two dragon-riding claimants fighting each other destroys the dragons and the realm — is not learned until after it is lived again. [show_s5_8]
+**The parallel:** The Dance of the Dragons is explicitly echoed in the main story — Daenerys as Rhaenyra (female claimant with dragons, rightful by some interpretations) against Cersei (the occupying power). In the show, both die. The Iron Throne is melted. The Dance's lesson — that two dragon-riding claimants fighting each other destroys the dragons and the realm — is not learned until after it is lived again. [show_got_s5_8]
 
 **The dragon extinction:** The Dance directly caused the end of Targaryen dragon power. The surviving dragons were few, small, and increasingly sickly. Within decades, the last dragon died. Daenerys's three are the first in over a century, which is why their existence is so destabilizing — the world had adapted to a world without dragons, and now it must adapt back. [book_fire_blood]
 

@@ -15,7 +15,7 @@ The old gods are the faith of the north — and, before the Andal invasion six t
 
 The children of the forest are the original inhabitants of Westeros — small, large-eyed, non-human creatures who lived in the forests for thousands of years before the First Men arrived. They carved the faces into the weirwood trees. The faces are not merely decorative; they are the nodes of a network of observation and memory. The children and the First Men fought, made a pact, and the children largely withdrew.
 
-By the time of the main story, the children are believed extinct. Bran Stark finds them alive beyond the Wall, beneath the great weirwood tree where the three-eyed raven sits. They have been diminishing since the Long Night. A few remain, bound to the oldest trees. [book_asoiaf] [show_s5_8]
+By the time of the main story, the children are believed extinct. Bran Stark finds them alive beyond the Wall, beneath the great weirwood tree where the three-eyed raven sits. They have been diminishing since the Long Night. A few remain, bound to the oldest trees. [book_asoiaf] [show_got_s5_8]
 
 ## Greensight and Warging
 

@@ -18,28 +18,34 @@
       "order": 2
     },
     {
+      "id": "hotd",
+      "label": "House of the Dragon",
+      "description": "170 years before. The Targaryen civil war. House of the Dragon seasons 1-2.",
+      "order": 3
+    },
+    {
       "id": "red_wedding",
       "label": "Beyond the Red Wedding",
       "description": "The north remembers. Everything changed.",
-      "order": 3
+      "order": 4
     },
     {
       "id": "dance_of_dragons",
       "label": "Dany Arrives in Westeros",
       "description": "Dragons come west. The final war begins.",
-      "order": 4
+      "order": 5
     },
     {
       "id": "show_complete",
       "label": "Show Complete",
       "description": "All eight seasons watched.",
-      "order": 5
+      "order": 6
     },
     {
       "id": "everything",
       "label": "Everything",
       "description": "All books, Fire and Blood, The World of Ice and Fire.",
-      "order": 6
+      "order": 7
     }
   ],
   "canon_sources": [
@@ -62,16 +68,36 @@
       "priority": 1
     },
     {
-      "id": "show_s1_4",
-      "label": "Show Seasons 1–4",
+      "id": "book_dunk_and_egg",
+      "label": "Dunk and Egg (Tales of Dunk and Egg)",
+      "description": "The hedge knight novellas. Ser Duncan the Tall and young Aegon V, 90 years before the main story.",
+      "priority": 1
+    },
+    {
+      "id": "show_got_s1_4",
+      "label": "GoT Show Seasons 1–4",
       "description": "Largely faithful to the books with compression. Always labeled.",
       "priority": 2
     },
     {
-      "id": "show_s5_8",
-      "label": "Show Seasons 5–8",
+      "id": "show_got_s5_8",
+      "label": "GoT Show Seasons 5–8",
       "description": "Diverges significantly from books. Always labeled. Not book canon.",
       "priority": 3,
+      "always_flag_as_adaptation": true
+    },
+    {
+      "id": "show_hotd_s1_2",
+      "label": "House of the Dragon Seasons 1–2",
+      "description": "HBO adaptation of Fire & Blood. The Dance of the Dragons, 170 years before GoT.",
+      "priority": 2,
+      "always_flag_as_adaptation": true
+    },
+    {
+      "id": "show_kotsk",
+      "label": "A Knight of the Seven Kingdoms (Show)",
+      "description": "HBO adaptation of Dunk and Egg. Ser Duncan and young Egg, 90 years before the main story.",
+      "priority": 2,
       "always_flag_as_adaptation": true
     }
   ],
@@ -91,7 +117,12 @@
       "varys.md",
       "melisandre.md",
       "stannis_baratheon.md",
-      "theon_greyjoy.md"
+      "theon_greyjoy.md",
+      "viserys_i.md",
+      "rhaenyra_targaryen.md",
+      "daemon_targaryen.md",
+      "alicent_hightower.md",
+      "aegon_ii.md"
     ],
     "factions": [
       "house_stark.md",
@@ -115,14 +146,16 @@
       "r_hllor.md",
       "the_old_gods.md",
       "targaryens_and_dragons.md",
-      "succession_and_legitimacy.md"
+      "succession_and_legitimacy.md",
+      "the_dance_of_dragons_detail.md"
     ],
     "events": [
       "roberts_rebellion.md",
       "red_wedding.md",
       "battle_of_the_blackwater.md",
       "purple_wedding.md",
-      "the_dance_of_dragons.md"
+      "the_dance_of_dragons.md",
+      "battle_of_the_gullet.md"
     ]
   },
   "voice_profile": "voice_profile.md",

@@ -6,7 +6,7 @@ Brandon Stark was an active child who climbed towers and dreamed of being a knig
 
 ## Key Facts
 
-- **Direwolf:** Summer — killed at the cave of the three-eyed raven, holding off wights during Bran's escape. [book_asoiaf] [show_s5_8]
+- **Direwolf:** Summer — killed at the cave of the three-eyed raven, holding off wights during Bran's escape. [book_asoiaf] [show_got_s5_8]
 - **His fall:** Pushed by Jaime Lannister after Bran climbed the broken tower and saw Jaime with Cersei. Jaime pushed him to prevent him from speaking. Bran survived with spinal injury. [book_asoiaf]
 - **Warging/Skinchanging:** He can enter the consciousness of animals — primarily Summer — and control them, experience what they experience. More developed than any other identified warg in the main story. [book_asoiaf]
 - **Hodor:** Wylis, a stableboy who suffered some kind of event that left him able to say only "Hodor." He carried Bran for the entirety of the journey north. The origin of his condition is a time-loop event involving Bran — explained below. [book_asoiaf for concept, show_s5_8 for specific execution]
@@ -14,19 +14,19 @@ Brandon Stark was an active child who climbed towers and dreamed of being a knig
 
 ## Relationships
 
-- **Jojen Reed:** The boy whose greendreams guided Bran north. Jojen knew he was dying; he accepted it. His death is handled differently in book and show. [book_asoiaf] [show_s5_8]
+- **Jojen Reed:** The boy whose greendreams guided Bran north. Jojen knew he was dying; he accepted it. His death is handled differently in book and show. [book_asoiaf] [show_got_s5_8]
 - **Meera Reed:** Jojen's sister, Bran's protector throughout the journey north and beyond the Wall. Her patience and physical courage are what kept him alive. [book_asoiaf]
 - **The Three-Eyed Raven:** An ancient man (Brynden Rivers, alias "Bloodraven," a bastard Targaryen from a century before — this identity is clearer in the books [book_asoiaf]) who has been merged with the weirwood roots for years, waiting for Bran. [show_s5_8 for the show's version with Max von Sydow]
 
 [spoiler_tier: war_of_five_kings]
 ## Flight from Winterfell
 
-After Theon's capture of Winterfell, Bran and Rickon fled the castle through the crypts with Hodor and the Reeds. Theon staged the execution of two boys he passed off as Bran and Rickon. Bran was believed dead by much of the realm. He traveled north with Meera, Jojen, and Hodor, heading toward the Wall and what lay beyond it. [book_asoiaf] [show_s1_4]
+After Theon's capture of Winterfell, Bran and Rickon fled the castle through the crypts with Hodor and the Reeds. Theon staged the execution of two boys he passed off as Bran and Rickon. Bran was believed dead by much of the realm. He traveled north with Meera, Jojen, and Hodor, heading toward the Wall and what lay beyond it. [book_asoiaf] [show_got_s1_4]
 
 [spoiler_tier: red_wedding]
 ## Beyond the Wall
 
-Bran crossed the Wall at Castle Black — Jon was there, but they did not see each other, a near-miss that frustrated readers/viewers. He continued north into the lands beyond, with the Reeds and Hodor and Summer. The journey was cold and dangerous and long. Jojen's greendreams guided them toward the three-eyed crow's location. [book_asoiaf] [show_s1_4]
+Bran crossed the Wall at Castle Black — Jon was there, but they did not see each other, a near-miss that frustrated readers/viewers. He continued north into the lands beyond, with the Reeds and Hodor and Summer. The journey was cold and dangerous and long. Jojen's greendreams guided them toward the three-eyed crow's location. [book_asoiaf] [show_got_s1_4]
 
 [spoiler_tier: dance_of_dragons]
 ## The Three-Eyed Raven's Cave
@@ -38,8 +38,8 @@ Hodor's origin: Bran, during a greenvision of young Hodor (Wylis) in the past, s
 [spoiler_tier: show_complete]
 ## The Three-Eyed Raven and the End
 
-In the show, Bran eventually became the Three-Eyed Raven — the successor to the ancient figure, an entity that holds all memory and can see through time. His personality became increasingly detached, which Meera and others found disturbing. He referred to himself in the third person. He told Jaime Lannister that he waited for him, and asked if he thought he would have wanted to be this. [show_s5_8]
+In the show, Bran eventually became the Three-Eyed Raven — the successor to the ancient figure, an entity that holds all memory and can see through time. His personality became increasingly detached, which Meera and others found disturbing. He referred to himself in the third person. He told Jaime Lannister that he waited for him, and asked if he thought he would have wanted to be this. [show_got_s5_8]
 
-He was chosen as king of the Six Kingdoms by the Great Council after Daenerys's death. Tyrion argued that stories — "Who has a better story than Bran the Broken?" — are what kings run on. Bran became king. He said he had not wanted it. He chose Tyrion as his Hand. He went looking for Drogon. [show_s5_8]
+He was chosen as king of the Six Kingdoms by the Great Council after Daenerys's death. Tyrion argued that stories — "Who has a better story than Bran the Broken?" — are what kings run on. Bran became king. He said he had not wanted it. He chose Tyrion as his Hand. He went looking for Drogon. [show_got_s5_8]
 
 This ending is the show's resolution and is the most contested outcome of the show's final season. The book trajectory for Bran — an increasingly powerful all-seeing entity merged with a global weirwood network — suggests a very different narrative role than constitutional monarch. The books are unresolved.

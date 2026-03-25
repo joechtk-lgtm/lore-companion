@@ -16,7 +16,7 @@ Braavos is one of the nine Free Cities of Essos — the most powerful, in many r
 
 The Iron Bank of Braavos is one of the most powerful institutions in the world. Its vaults hold gold that dwarfs what most kings control. It lends money to governments, merchant consortiums, and individuals on a scale that makes the Lannisters look like a local lender. Its ledgers are its holy texts.
 
-The Bank does not forgive debts. It does not forget them. The phrase attributed to it: when kings default, the Iron Bank funds their enemies. The Baratheon crown was deeply in debt to the Iron Bank. Stannis Baratheon borrowed from it to fund his northern campaign. [book_asoiaf] [show_s1_4]
+The Bank does not forgive debts. It does not forget them. The phrase attributed to it: when kings default, the Iron Bank funds their enemies. The Baratheon crown was deeply in debt to the Iron Bank. Stannis Baratheon borrowed from it to fund his northern campaign. [book_asoiaf] [show_got_s1_4]
 
 ## The House of Black and White
 
@@ -24,7 +24,7 @@ The Faceless Men's temple in Braavos, open to anyone who comes to it. Located on
 
 Anyone may enter and ask for the gift. The price is always extracted. The poor get nothing, because they have nothing to give. The very poor sometimes receive the gift for free, as genuine mercy for those who are suffering beyond help. The Faceless Men make this distinction quietly. [book_asoiaf]
 
-Arya's time in Braavos was centered on the House of Black and White. See Arya Stark and Faceless Men entries for detail. [book_asoiaf] [show_s5_8]
+Arya's time in Braavos was centered on the House of Black and White. See Arya Stark and Faceless Men entries for detail. [book_asoiaf] [show_got_s5_8]
 
 ## The Mummers and the Theaters
 

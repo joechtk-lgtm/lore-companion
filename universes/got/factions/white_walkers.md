@@ -14,7 +14,7 @@ In A Song of Ice and Fire, they are called "the Others." In the HBO show, they a
 
 ## The Night King
 
-The Night King is a show creation [show_s5_8]. He does not exist in the books as a named individual character. In the show, he is the leader of the White Walkers, created by the Children of the Forest at a weirwood tree — a man captured and transformed by obsidian driven into his chest. His history is revealed in show Season 6 [show_s5_8].
+The Night King is a show creation [show_got_s5_8]. He does not exist in the books as a named individual character. In the show, he is the leader of the White Walkers, created by the Children of the Forest at a weirwood tree — a man captured and transformed by obsidian driven into his chest. His history is revealed in show Season 6 [show_got_s5_8].
 
 In the books, "the Night's King" is a historical figure from the age of heroes — the thirteenth Lord Commander of the Night's Watch, who fell in love with a woman with blue eyes (possibly an Other), declared himself king, and was eventually destroyed by the combined forces of Stark and Wildling. This figure may or may not be connected to the Others in the books; the connection is implied but not confirmed. [book_asoiaf]
 
@@ -29,11 +29,11 @@ Theories: they may be connected to the long winter cycles of the world, to the i
 [spoiler_tier: war_of_five_kings]
 ## The Threat Made Real
 
-The surviving rangers returning from the Fist of the First Men brought word of what they had seen. Sam's killing of an Other with dragonglass was the first evidence in thousands of years that they could be killed at all. Jon Snow saw the army of the dead beyond the Wall — the sheer scale of it, the numbers of wights, the Walkers themselves. [book_asoiaf] [show_s1_4]
+The surviving rangers returning from the Fist of the First Men brought word of what they had seen. Sam's killing of an Other with dragonglass was the first evidence in thousands of years that they could be killed at all. Jon Snow saw the army of the dead beyond the Wall — the sheer scale of it, the numbers of wights, the Walkers themselves. [book_asoiaf] [show_got_s1_4]
 
 [spoiler_tier: show_complete]
 ## The Battle of Winterfell
 
-In the show, Arya Stark killed the Night King at the Battle of Winterfell with a Valyrian steel dagger, destroying him and all the wights he had raised. The threat ended in the episode. [show_s5_8]
+In the show, Arya Stark killed the Night King at the Battle of Winterfell with a Valyrian steel dagger, destroying him and all the wights he had raised. The threat ended in the episode. [show_got_s5_8]
 
 Whether the book version of the Others ends this way, or whether their arc is longer and more complex, is unknown. The Winds of Winter and A Dream of Spring are unpublished.

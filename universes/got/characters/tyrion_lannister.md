@@ -18,13 +18,13 @@ Tyrion Lannister is the youngest child of Tywin Lannister — a dwarf, a survivo
 - **Tywin:** His father, who respects his intelligence and despises his person. Tywin used him when useful and sidelined him when not. Tyrion spent his life trying to earn acknowledgment and never received it. [book_asoiaf]
 - **Cersei:** His sister, who blames him for their mother's death with a hatred that predates reason. Their relationship is mutual hostility punctuated by rare and grudging acknowledgment. [book_asoiaf]
 - **Jaime:** His brother, the one person in his family who treats him as a person. Their relationship is the most complex Lannister bond — genuine affection, genuine guilt on Jaime's part about Tysha, and the moment when it all breaks. [book_asoiaf]
-- **Shae:** His mistress in King's Landing, forbidden by Tywin (who tolerated whores but not love). What she represented to Tyrion, and what she did to him at his trial, is the key to understanding why Tywin died the way he did. [book_asoiaf] [show_s1_4]
-- **Pod:** Podrick Payne, his squire — saved his life at the Blackwater. One of Tyrion's few uncomplicated loyalties. [book_asoiaf] [show_s1_4]
-- **Bronn:** The sellsword who serves him for money and occasional genuine affection. Honest about both. [book_asoiaf] [show_s1_4]
+- **Shae:** His mistress in King's Landing, forbidden by Tywin (who tolerated whores but not love). What she represented to Tyrion, and what she did to him at his trial, is the key to understanding why Tywin died the way he did. [book_asoiaf] [show_got_s1_4]
+- **Pod:** Podrick Payne, his squire — saved his life at the Blackwater. One of Tyrion's few uncomplicated loyalties. [book_asoiaf] [show_got_s1_4]
+- **Bronn:** The sellsword who serves him for money and occasional genuine affection. Honest about both. [book_asoiaf] [show_got_s1_4]
 
 ## Hand of the King
 
-When Tyrion arrived in King's Landing as acting Hand (Tywin remained in the field), he found chaos: Cersei managing an unmanageable king, a treasury emptied, allies alienated. He began to clean house. He manipulated Cersei's allies against each other, removed the corrupt City Watch commander Janos Slynt, and began preparing the city's defenses against Stannis Baratheon's inevitable assault. [book_asoiaf] [show_s1_4]
+When Tyrion arrived in King's Landing as acting Hand (Tywin remained in the field), he found chaos: Cersei managing an unmanageable king, a treasury emptied, allies alienated. He began to clean house. He manipulated Cersei's allies against each other, removed the corrupt City Watch commander Janos Slynt, and began preparing the city's defenses against Stannis Baratheon's inevitable assault. [book_asoiaf] [show_got_s1_4]
 
 He was better at the job than anyone acknowledged.
 
@@ -35,7 +35,7 @@ When Stannis attacked King's Landing by sea, Tyrion's preparation was what saved
 
 Joffrey fled the battlements. Tyrion led a sortie through the tunnels, fighting in the field himself, rallying the men. He was nearly killed — by Ser Mandon Moore, who was bribed to do it (in the books, it is implied Cersei arranged this; the show is less specific). Podrick Payne saved his life. Tyrion was dragged away with his face slashed — half his nose removed in the books; a scar across his face in the show.
 
-Tywin arrived with Tyrell reinforcements and broke the siege. Joffrey thanked him. Tyrion was moved to a lesser room to recover, stripped of his temporary Hand's power, and received not one word of gratitude. [book_asoiaf] [show_s1_4]
+Tywin arrived with Tyrell reinforcements and broke the siege. Joffrey thanked him. Tyrion was moved to a lesser room to recover, stripped of his temporary Hand's power, and received not one word of gratitude. [book_asoiaf] [show_got_s1_4]
 
 [spoiler_tier: red_wedding]
 ## Trial, Betrayal, and Flight
@@ -60,6 +60,6 @@ His value to her: he understands Westeros as an insider, understands how the gre
 [spoiler_tier: show_complete]
 ## Show Ending
 
-Tyrion is captured after Daenerys burns King's Landing, imprisoned for freeing Jaime. In his cell he brokers the Great Council outcome: Bran Stark as king. He is appointed Hand of the King again. [show_s5_8]
+Tyrion is captured after Daenerys burns King's Landing, imprisoned for freeing Jaime. In his cell he brokers the Great Council outcome: Bran Stark as king. He is appointed Hand of the King again. [show_got_s5_8]
 
 This is the show's resolution. The book arc for Tyrion is unresolved. The Winds of Winter is unpublished. His trajectory in the books — still in Essos, still en route to Daenerys — has not yet reached this point.

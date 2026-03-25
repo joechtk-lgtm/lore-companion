@@ -18,18 +18,18 @@ It sits on a volcano. This is the source of something far more practically impor
 
 Dragonstone controls the Blackwater Rush's approaches. Any fleet moving to King's Landing from the east must contend with Dragonstone. This is why Robert gave it to Stannis rather than Renly — it was a military assignment, not a gift — and why Stannis used it as his base through most of the war.
 
-In the show, Jon Snow travels to Dragonstone to meet Daenerys and negotiate access to the dragonglass mines, which is what convinces him of her good faith. [show_s5_8]
+In the show, Jon Snow travels to Dragonstone to meet Daenerys and negotiate access to the dragonglass mines, which is what convinces him of her good faith. [show_got_s5_8]
 
 [spoiler_tier: war_of_five_kings]
 ## Stannis's Base
 
-Stannis commanded his fleet from Dragonstone. Melisandre conducted ceremonies on the beaches, burning the effigies of the Seven's gods. The Red Priestess's presence made the castle a seat of R'hllor's faith as much as any other religion's. After the Blackwater, Stannis retreated here to regroup. [book_asoiaf] [show_s1_4]
+Stannis commanded his fleet from Dragonstone. Melisandre conducted ceremonies on the beaches, burning the effigies of the Seven's gods. The Red Priestess's presence made the castle a seat of R'hllor's faith as much as any other religion's. After the Blackwater, Stannis retreated here to regroup. [book_asoiaf] [show_got_s1_4]
 
-The siege of Dragonstone by Lannister-Tyrell forces eventually ended the Baratheon claim to the island. [show_s5_8]
+The siege of Dragonstone by Lannister-Tyrell forces eventually ended the Baratheon claim to the island. [show_got_s5_8]
 
 [spoiler_tier: dance_of_dragons]
 ## Daenerys at Dragonstone
 
-In the show, Daenerys arrived at Dragonstone at the start of Season 7 and made it her initial base of operations for the campaign in Westeros. She walked through the empty castle alone — returning to the ancestral home she had never seen, born in a storm as her family fled. She stood at the painted table and looked at the map of the continent she intended to rule. [show_s5_8]
+In the show, Daenerys arrived at Dragonstone at the start of Season 7 and made it her initial base of operations for the campaign in Westeros. She walked through the empty castle alone — returning to the ancestral home she had never seen, born in a storm as her family fled. She stood at the painted table and looked at the map of the continent she intended to rule. [show_got_s5_8]
 
 The mining of dragonglass at Dragonstone — and Jon's access to it for the fight against the White Walkers — was the primary strategic negotiation of the show's penultimate season.

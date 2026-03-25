@@ -16,15 +16,15 @@ The faith's credibility in the story's context: unlike the Seven (whose miracles
 
 ## Thoros of Myr
 
-Thoros of Myr is a Red Priest who came to Westeros as a missionary and largely gave up — he was more interested in wine and adventure. He joined the Brotherhood Without Banners, and discovered that his prayers over the dead brought Beric Dondarrion back to life — repeatedly. He did not fully understand how. The ability came back when he needed it. Each resurrection eroded more of the person resurrected; Beric Dondarrion remembers less of himself with each return. [book_asoiaf] [show_s1_4]
+Thoros of Myr is a Red Priest who came to Westeros as a missionary and largely gave up — he was more interested in wine and adventure. He joined the Brotherhood Without Banners, and discovered that his prayers over the dead brought Beric Dondarrion back to life — repeatedly. He did not fully understand how. The ability came back when he needed it. Each resurrection eroded more of the person resurrected; Beric Dondarrion remembers less of himself with each return. [book_asoiaf] [show_got_s1_4]
 
 This detail — that resurrection costs the person something — is significant context for Jon Snow's resurrection and the question of what came back.
 
 ## Melisandre's Failures
 
-The great flaw in R'hllor's practice is that visions in flames are true but not transparent. Melisandre saw Stannis in the flames — battles, victories, ice. She interpreted this as Stannis being the promised champion. She was wrong. The visions were real; the interpretation was hers. After Stannis's defeat, she began to see Jon Snow in the same way. Whether she was right about Jon, or whether the same interpretive error was happening again, is a question the story holds open. [book_asoiaf] [show_s5_8]
+The great flaw in R'hllor's practice is that visions in flames are true but not transparent. Melisandre saw Stannis in the flames — battles, victories, ice. She interpreted this as Stannis being the promised champion. She was wrong. The visions were real; the interpretation was hers. After Stannis's defeat, she began to see Jon Snow in the same way. Whether she was right about Jon, or whether the same interpretive error was happening again, is a question the story holds open. [book_asoiaf] [show_got_s5_8]
 
 [spoiler_tier: show_complete]
 ## What the Faith Achieved
 
-In the show, Melisandre's resurrection of Jon Snow was the act that most changed the course of events — Jon came back, retook Winterfell, fought the White Walkers. Whether this is R'hllor's purpose being served, or coincidence exploited by faith, is not resolved. The show does not definitively confirm or deny the divine nature of these events. Beric Dondarrion died shielding Arya so she could reach the Night King — having been kept alive by resurrection specifically, it seemed, for that purpose. Whether the Lord of Light arranged this is left to the viewer. [show_s5_8]
+In the show, Melisandre's resurrection of Jon Snow was the act that most changed the course of events — Jon came back, retook Winterfell, fought the White Walkers. Whether this is R'hllor's purpose being served, or coincidence exploited by faith, is not resolved. The show does not definitively confirm or deny the divine nature of these events. Beric Dondarrion died shielding Arya so she could reach the Night King — having been kept alive by resurrection specifically, it seemed, for that purpose. Whether the Lord of Light arranged this is left to the viewer. [show_got_s5_8]

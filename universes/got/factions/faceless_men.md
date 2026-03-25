@@ -24,7 +24,7 @@ Arya arrived in Braavos with the iron coin Jaqen had given her. The coin and the
 [spoiler_tier: dance_of_dragons]
 ## The Price of Arya's Training
 
-She was given assignments. She killed her first target. She killed a second. She killed Meryn Trant (show [show_s5_8]) / Raff the Sweetling (books [book_asoiaf]) — a personal kill, off-assignment, off the Many-Faced God's list. She was blinded as punishment.
+She was given assignments. She killed her first target. She killed a second. She killed Meryn Trant (show [show_got_s5_8]) / Raff the Sweetling (books [book_asoiaf]) — a personal kill, off-assignment, off the Many-Faced God's list. She was blinded as punishment.
 
 She eventually recovered her sight by demonstrating she could use her other senses. She was given a final test — told to kill an actor playing Joffrey in a play. She discovered the true target was meant to be someone else entirely. She chose her own path, retrieved Needle from its hiding place, and killed the Faceless Man sent to kill her. She declared herself Arya Stark of Winterfell, not "no one."
 
