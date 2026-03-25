@@ -16,16 +16,38 @@ function loadStore() {
   }
 }
 
-function saveUniverseSettings(universeId, { canonSources, spoilerTier }) {
+function saveUniverseSettings(universeId, { canonSources, spoilerTier, universeName, isCustom }) {
   const store = loadStore()
   store.lastUniverse = universeId
   store.universes = store.universes || {}
-  store.universes[universeId] = { canonSources, spoilerTier }
+  store.universes[universeId] = {
+    canonSources,
+    spoilerTier,
+    ...(isCustom ? { universeName, isCustom: true } : {}),
+  }
   localStorage.setItem(STORE_KEY, JSON.stringify(store))
 }
 
 function clearAll() {
   localStorage.removeItem(STORE_KEY)
+}
+
+function buildCustomUniverse(universeId, universeName) {
+  return {
+    id: universeId,
+    title: universeName.toUpperCase(),
+    subtitle: 'General knowledge mode.',
+    tags: [],
+    accentColor: '#7a7a6a',
+    isCustom: true,
+    universeName,
+    enterLabel: `ENTER ${universeName.toUpperCase()}`,
+    wakeMessage: `Summoning knowledge of ${universeName}...`,
+    sources: [],
+    tiers: [],
+    defaultSources: [],
+    defaultTier: null,
+  }
 }
 
 export default function App() {
@@ -45,7 +67,7 @@ export default function App() {
     const store = loadStore()
     const lastId = store.lastUniverse
     const lastSaved = lastId && store.universes?.[lastId]
-    if (lastSaved?.canonSources && lastSaved?.spoilerTier) {
+    if (lastSaved && (lastSaved.spoilerTier || lastSaved.isCustom)) {
       setReturnShortcut({
         universeId: lastId,
         ...lastSaved,
@@ -60,6 +82,20 @@ export default function App() {
   }, [settings])
 
   // ── Universe Select ────────────────────────────────────────────
+
+  function handleOpenUniverse(universeName) {
+    const universeId = 'custom_' + universeName.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/_+$/, '')
+    const newSettings = {
+      universeId,
+      universeName,
+      isCustom: true,
+      canonSources: [],
+      spoilerTier: null,
+    }
+    saveUniverseSettings(universeId, newSettings)
+    setSettings(newSettings)
+    setScreen('ask')
+  }
 
   function handleUniverseSetPreferences(id) {
     setUniverseId(id)
@@ -163,7 +199,11 @@ export default function App() {
 
   if (screen === 'loading') return null
 
-  const activeUniverse = settings ? UNIVERSES[settings.universeId] : null
+  const activeUniverse = settings
+    ? (settings.isCustom
+        ? buildCustomUniverse(settings.universeId, settings.universeName)
+        : UNIVERSES[settings.universeId])
+    : null
 
   return (
     <div className="min-h-full bg-[#0e0d0b] flex justify-center">
@@ -176,6 +216,7 @@ export default function App() {
             onReturnShortcut={handleReturnShortcut}
             onSetPreferences={handleUniverseSetPreferences}
             onSkipSetup={handleUniverseSkipSetup}
+            onOpenUniverse={handleOpenUniverse}
           />
         )}
 
@@ -199,7 +240,7 @@ export default function App() {
           />
         )}
 
-        {screen === 'ask' && settings && activeUniverse && (
+        {screen === 'ask' && settings && activeUniverse && settings.universeId && (
           <AskScreen
             key={'ask-' + settings.universeId}
             settings={settings}

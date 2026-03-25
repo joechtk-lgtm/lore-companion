@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { UNIVERSES, getTierLabel } from '../universes'
 
 function Diamond({ color = '#c9a84c' }) {
@@ -8,6 +8,40 @@ function Diamond({ color = '#c9a84c' }) {
     </svg>
   )
 }
+
+const POPULAR_UNIVERSES = [
+  { name: "Cyberpunk 2077", type: "Game" },
+  { name: "Baldur's Gate 3", type: "Game" },
+  { name: "Final Fantasy VII", type: "Game" },
+  { name: "Mass Effect", type: "Game" },
+  { name: "Red Dead Redemption 2", type: "Game" },
+  { name: "Dark Souls", type: "Game" },
+  { name: "Halo", type: "Game" },
+  { name: "The Last of Us", type: "Game" },
+  { name: "Horizon Zero Dawn", type: "Game" },
+  { name: "God of War", type: "Game" },
+  { name: "Breaking Bad", type: "TV Series" },
+  { name: "Succession", type: "TV Series" },
+  { name: "The Sopranos", type: "TV Series" },
+  { name: "Severance", type: "TV Series" },
+  { name: "Arcane", type: "TV Series" },
+  { name: "Westworld", type: "TV Series" },
+  { name: "The Boys", type: "TV Series" },
+  { name: "Peaky Blinders", type: "TV Series" },
+  { name: "Shogun", type: "TV Series" },
+  { name: "Harry Potter", type: "Book & Film" },
+  { name: "His Dark Materials", type: "Book" },
+  { name: "Wheel of Time", type: "Book & TV" },
+  { name: "Foundation", type: "Book & TV" },
+  { name: "Mistborn", type: "Book" },
+  { name: "Stormlight Archive", type: "Book" },
+  { name: "Star Wars", type: "Film & TV" },
+  { name: "Marvel Cinematic Universe", type: "Film & TV" },
+  { name: "The Matrix", type: "Film" },
+  { name: "Blade Runner", type: "Film" },
+  { name: "Interstellar", type: "Film" },
+  { name: "Alien", type: "Film" },
+]
 
 const UNIVERSE_ICONS = {
   witcher3: (color) => (
@@ -129,14 +163,31 @@ export default function UniverseSelect({
   onReturnShortcut,
   onSetPreferences,
   onSkipSetup,
+  onOpenUniverse,
 }) {
   const universeList = Object.values(UNIVERSES)
   const [selectedId, setSelectedId] = useState(
-    returnShortcut?.universeId || universeList[0].id
+    (returnShortcut && !returnShortcut.isCustom && returnShortcut.universeId) || universeList[0].id
   )
+  const [query, setQuery] = useState('')
+  const [dropdownOpen, setDropdownOpen] = useState(false)
+  const searchRef = useRef(null)
 
   const selected = UNIVERSES[selectedId]
   const accent = selected.accentColor
+
+  const filteredSuggestions = query.length > 0
+    ? POPULAR_UNIVERSES.filter(u => u.name.toLowerCase().includes(query.toLowerCase())).slice(0, 6)
+    : []
+  const exactMatch = filteredSuggestions.some(u => u.name.toLowerCase() === query.toLowerCase())
+  const showCustomEntry = query.length > 0 && !exactMatch
+
+  // Returning user shortcut helpers
+  const rcUniverse = returnShortcut ? UNIVERSES[returnShortcut.universeId] : null
+  const rcIsCustom = returnShortcut ? (returnShortcut.isCustom || !rcUniverse) : false
+  const rcName = rcIsCustom ? returnShortcut?.universeName : rcUniverse?.title.replace('THE ', '')
+  const rcTierLabel = rcIsCustom ? 'General knowledge' : (rcUniverse ? getTierLabel(rcUniverse, returnShortcut?.spoilerTier) : '')
+  const rcAccent = rcIsCustom ? '#7a7a6a' : rcUniverse?.accentColor
 
   return (
     <div className="screen-enter flex flex-col min-h-screen px-5 py-10">
@@ -168,13 +219,9 @@ export default function UniverseSelect({
                 </div>
                 <div className="font-['Crimson_Pro'] text-[15px] text-[#9a9070]">
                   Continue as{' '}
-                  <span className="text-[#e8dfc0]">
-                    {UNIVERSES[returnShortcut.universeId]?.title.replace('THE ', '')}
-                  </span>
+                  <span className="text-[#e8dfc0]">{rcName}</span>
                   {' · '}
-                  <span style={{ color: UNIVERSES[returnShortcut.universeId]?.accentColor }}>
-                    {getTierLabel(UNIVERSES[returnShortcut.universeId], returnShortcut.spoilerTier)}
-                  </span>
+                  <span style={{ color: rcAccent }}>{rcTierLabel}</span>
                 </div>
               </div>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="flex-shrink-0 text-[#5a5540]">
@@ -198,6 +245,87 @@ export default function UniverseSelect({
             onClick={() => setSelectedId(u.id)}
           />
         ))}
+      </div>
+
+      {/* Divider */}
+      <div className="stagger-4 flex items-center gap-3 my-2">
+        <div className="flex-1 h-px bg-[#2e2614]" />
+        <span className="font-['Crimson_Pro'] text-[13px] italic text-[#3a3520]">or explore any universe</span>
+        <div className="flex-1 h-px bg-[#2e2614]" />
+      </div>
+
+      {/* Open universe card */}
+      <div className="stagger-4 rounded-[14px] bg-[#111009] border border-[#2e2614] p-5 mb-8">
+        <div className="font-['Cinzel'] text-[10px] tracking-[0.18em] text-[#5a5540] mb-3">
+          EXPLORE ANY UNIVERSE
+        </div>
+
+        {/* Search input + autocomplete dropdown */}
+        <div className="relative mb-3">
+          <input
+            ref={searchRef}
+            type="text"
+            value={query}
+            onChange={e => { setQuery(e.target.value); setDropdownOpen(true) }}
+            onFocus={e => {
+              setDropdownOpen(true)
+              e.currentTarget.style.borderColor = '#7a7a6a40'
+            }}
+            onBlur={e => {
+              setTimeout(() => setDropdownOpen(false), 150)
+              e.currentTarget.style.borderColor = '#2e2614'
+            }}
+            placeholder="Search a universe..."
+            className="w-full bg-[#0e0d0b] border border-[#2e2614] rounded-[10px] px-4 py-3 font-['Crimson_Pro'] text-[16px] italic text-[#e8dfc0] placeholder-[#3a3520] outline-none transition-colors"
+          />
+
+          {dropdownOpen && query.length > 0 && (filteredSuggestions.length > 0 || showCustomEntry) && (
+            <div className="absolute top-full left-0 right-0 mt-1 bg-[#16130a] border border-[#2e2614] rounded-[10px] z-10 overflow-hidden">
+              {filteredSuggestions.map(u => (
+                <button
+                  key={u.name}
+                  onMouseDown={e => { e.preventDefault(); setQuery(u.name); setDropdownOpen(false) }}
+                  className="w-full text-left px-4 py-2.5 flex items-center justify-between hover:bg-[#1c180c] transition-colors"
+                >
+                  <span className="font-['Crimson_Pro'] text-[15px] italic text-[#9a9070]">{u.name}</span>
+                  <span className="font-['Cinzel'] text-[9px] tracking-[0.1em] text-[#3a3520]">{u.type}</span>
+                </button>
+              ))}
+              {showCustomEntry && (
+                <button
+                  onMouseDown={e => { e.preventDefault(); setDropdownOpen(false) }}
+                  className="w-full text-left px-4 py-2.5 flex items-center justify-between border-t border-[#1e1c14] hover:bg-[#1c180c] transition-colors"
+                >
+                  <span className="font-['Crimson_Pro'] text-[15px] italic text-[#9a9070]">{query}</span>
+                  <span className="font-['Cinzel'] text-[9px] tracking-[0.1em] text-[#3a3520]">CUSTOM</span>
+                </button>
+              )}
+            </div>
+          )}
+        </div>
+
+        {/* Warning — shown when input has content */}
+        {query.trim() && (
+          <div className="flex items-start gap-2 mb-3">
+            <Diamond color="#3a3520" />
+            <p className="font-['Crimson_Pro'] text-[13px] italic text-[#3a3520] leading-snug">
+              General knowledge mode. This universe is not in our verified library. Answers draw from AI training data. Spoiler protection is best effort, not guaranteed.
+            </p>
+          </div>
+        )}
+
+        {/* CTA */}
+        <button
+          disabled={!query.trim()}
+          onClick={() => query.trim() && onOpenUniverse(query.trim())}
+          className="w-full py-3.5 rounded-[12px] border font-['Cinzel'] text-[11px] tracking-[0.2em] transition-all duration-150 disabled:opacity-30 disabled:cursor-not-allowed"
+          style={{
+            borderColor: query.trim() ? '#7a7a6a' : '#2e2614',
+            color: query.trim() ? '#9a9080' : '#3a3520',
+          }}
+        >
+          {query.trim() ? `ENTER ${query.toUpperCase()} →` : 'SEARCH A UNIVERSE FIRST'}
+        </button>
       </div>
 
       {/* Action buttons */}

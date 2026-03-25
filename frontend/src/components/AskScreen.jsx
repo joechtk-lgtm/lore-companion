@@ -194,8 +194,9 @@ function Message({ msg, accentColor, onSuggestionTap, onGoDeeper }) {
 }
 
 function BottomSheet({ settings, universe, onChangeTier, onChangeCanon, onSwitchUniverse, onResetAll, onClose }) {
-  const tierLabel = getTierLabel(universe, settings.spoilerTier)
-  const sourcesLabel = settings.canonSources.map(s => {
+  const isCustom = universe.isCustom
+  const tierLabel = isCustom ? null : getTierLabel(universe, settings.spoilerTier)
+  const sourcesLabel = isCustom ? null : settings.canonSources.map(s => {
     const src = universe.sources.find(x => x.id === s)
     return src ? src.label.split(' ')[0] : s
   }).join(' + ')
@@ -222,31 +223,41 @@ function BottomSheet({ settings, universe, onChangeTier, onChangeCanon, onSwitch
           <div className="flex items-center justify-between">
             <span className="font-['Crimson_Pro'] text-[15px] text-[#5a5540]">Universe</span>
             <span className="font-['Cinzel'] text-[11px] tracking-[0.1em]" style={{ color: accent }}>
-              {universe.title}
+              {isCustom ? settings.universeName : universe.title}
             </span>
           </div>
-          <div className="flex items-center justify-between">
-            <span className="font-['Crimson_Pro'] text-[15px] text-[#5a5540]">Spoiler tier</span>
-            <span className="font-['Cinzel'] text-[11px] tracking-[0.1em]" style={{ color: accent }}>
-              {tierLabel}
-            </span>
-          </div>
-          <div className="flex items-center justify-between">
-            <span className="font-['Crimson_Pro'] text-[15px] text-[#5a5540]">Canon sources</span>
-            <span className="font-['Cinzel'] text-[11px] tracking-[0.1em]" style={{ color: accent }}>
-              {sourcesLabel}
-            </span>
-          </div>
+          {isCustom ? (
+            <div className="flex items-center justify-between">
+              <span className="font-['Crimson_Pro'] text-[15px] text-[#5a5540]">Mode</span>
+              <span className="font-['Cinzel'] text-[11px] tracking-[0.1em]" style={{ color: accent }}>
+                GENERAL KNOWLEDGE
+              </span>
+            </div>
+          ) : (
+            <>
+              <div className="flex items-center justify-between">
+                <span className="font-['Crimson_Pro'] text-[15px] text-[#5a5540]">Spoiler tier</span>
+                <span className="font-['Cinzel'] text-[11px] tracking-[0.1em]" style={{ color: accent }}>
+                  {tierLabel}
+                </span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="font-['Crimson_Pro'] text-[15px] text-[#5a5540]">Canon sources</span>
+                <span className="font-['Cinzel'] text-[11px] tracking-[0.1em]" style={{ color: accent }}>
+                  {sourcesLabel}
+                </span>
+              </div>
+            </>
+          )}
         </div>
 
         <div className="h-px bg-[#2e2614] mb-5" />
 
         {/* Actions */}
         <div className="space-y-2">
-          {[
+          {!isCustom && [
             { label: 'CHANGE SPOILER TIER', action: onChangeTier },
             { label: 'CHANGE CANON SOURCES', action: onChangeCanon },
-            { label: 'SWITCH UNIVERSE', action: onSwitchUniverse },
           ].map(({ label, action }) => (
             <button
               key={label}
@@ -256,6 +267,13 @@ function BottomSheet({ settings, universe, onChangeTier, onChangeCanon, onSwitch
               {label}
             </button>
           ))}
+
+          <button
+            onClick={() => { onClose(); onSwitchUniverse() }}
+            className="w-full py-3.5 rounded-[12px] border border-[#2e2614] font-['Cinzel'] text-[11px] tracking-[0.15em] text-[#5a5540] transition-all duration-150 hover:border-[#5a5540] hover:text-[#9a9070]"
+          >
+            SWITCH UNIVERSE
+          </button>
 
           <button
             onClick={() => { onClose(); onResetAll() }}
@@ -286,9 +304,20 @@ export default function AskScreen({
   const inputRef = useRef(null)
 
   const accent = universe.accentColor
-  const universeQuotes = QUOTES[universe.id] || QUOTES.witcher3
+  const universeQuotes = universe.isCustom
+    ? [{ text: 'Every story has its lore. Every world has its rules. Ask what you wish to know.', author: 'Lore Companion' }]
+    : (QUOTES[universe.id] || QUOTES.witcher3)
   const quote = useRef(universeQuotes[Math.floor(Math.random() * universeQuotes.length)]).current
-  const tierLabel = getTierLabel(universe, settings.spoilerTier)
+  const tierLabel = universe.isCustom ? null : getTierLabel(universe, settings.spoilerTier)
+
+  const warnSessionKey = `custom-warn-${settings.universeId}`
+  const [warnDismissed, setWarnDismissed] = useState(
+    () => universe.isCustom ? !!sessionStorage.getItem(warnSessionKey) : true
+  )
+  function dismissWarn() {
+    sessionStorage.setItem(warnSessionKey, '1')
+    setWarnDismissed(true)
+  }
 
   // Wake-up message timer
   useEffect(() => {
@@ -327,6 +356,7 @@ export default function AskScreen({
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           universe_id: settings.universeId,
+          ...(settings.universeName && { universe_name: settings.universeName }),
           spoiler_tier: settings.spoilerTier,
           canon_sources: settings.canonSources,
           question: q,
@@ -402,11 +432,13 @@ export default function AskScreen({
             className="font-['Cinzel'] text-[10px] tracking-[0.1em] border rounded-[20px] px-3 py-1 transition-colors"
             style={{ color: accent, borderColor: `${accent}60` }}
           >
-            {universe.title.replace('THE ', '')}
+            {universe.isCustom ? settings.universeName : universe.title.replace('THE ', '')}
           </button>
-          <span className="font-['Cinzel'] text-[10px] tracking-[0.1em] text-[#5a5540] border border-[#2e2614] rounded-[20px] px-3 py-1">
-            {tierLabel}
-          </span>
+          {!universe.isCustom && (
+            <span className="font-['Cinzel'] text-[10px] tracking-[0.1em] text-[#5a5540] border border-[#2e2614] rounded-[20px] px-3 py-1">
+              {tierLabel}
+            </span>
+          )}
         </div>
 
         {/* Hamburger */}
@@ -419,6 +451,24 @@ export default function AskScreen({
           <span className="block w-4 h-px bg-current" />
         </button>
       </div>
+
+      {/* Warning banner — custom universes only */}
+      {universe.isCustom && !warnDismissed && (
+        <div className="flex-shrink-0 flex items-center gap-2 px-4 py-2.5 bg-[#1a1508] border-b border-[#2e2614]">
+          <Diamond color="#5a5540" />
+          <p className="flex-1 font-['Crimson_Pro'] text-[13px] italic text-[#5a5540] leading-snug">
+            General knowledge mode. Spoiler protection is not guaranteed for this universe.
+          </p>
+          <button
+            onClick={dismissWarn}
+            className="flex-shrink-0 text-[#3a3520] hover:text-[#5a5540] transition-colors ml-1"
+          >
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M1 1L13 13M13 1L1 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            </svg>
+          </button>
+        </div>
+      )}
 
       {/* Messages */}
       <div className="flex-1 overflow-y-auto px-4 py-6">

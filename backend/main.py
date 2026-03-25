@@ -82,8 +82,9 @@ def check_rate_limits(ip: str) -> None:
 
 class AskRequest(BaseModel):
     universe_id: str
-    spoiler_tier: str
-    canon_sources: list[str]
+    universe_name: Optional[str] = None
+    spoiler_tier: Optional[str] = None
+    canon_sources: Optional[list[str]] = None
     question: str
     history: Optional[list[dict]] = None
 
@@ -273,6 +274,57 @@ def parse_suggestions(raw_answer: str) -> tuple[str, list[str]]:
     return answer, suggestions[:2]
 
 
+# --- Fallback (Uncurated Universe) ---
+
+def build_fallback_system_prompt(universe_name: str) -> str:
+    return f"""You are a knowledgeable lore guide for {universe_name}.
+
+Answer questions about {universe_name}'s characters, events, factions, lore, and world-building accurately based on your training knowledge.
+
+SPOILER AWARENESS:
+The user has not specified a spoiler tier. If your answer contains major plot reveals or significant spoilers, briefly note this at the start of your answer.
+
+RESPONSE FORMAT:
+Answer the question directly and informatively. Be appropriately concise.
+
+After your answer, on a new line write SUGGESTIONS: followed by exactly 2 follow-up questions the user might want to ask, separated by a | character.
+Example: SUGGESTIONS: Who is the main protagonist?|What is the central conflict?
+The suggestions should be natural follow-ups to your specific answer. Do not repeat the question just asked."""
+
+
+async def handle_uncurated_universe(request: AskRequest) -> AskResponse:
+    universe_name = (
+        request.universe_name
+        or request.universe_id.replace("custom_", "").replace("_", " ").title()
+    )
+
+    api_key = os.getenv("ANTHROPIC_API_KEY")
+    if not api_key:
+        raise HTTPException(status_code=500, detail="ANTHROPIC_API_KEY not set.")
+
+    client = anthropic.Anthropic(api_key=api_key)
+    messages = list(request.history) if request.history else []
+    messages.append({"role": "user", "content": request.question})
+
+    with client.messages.stream(
+        model="claude-haiku-4-5-20251001",
+        max_tokens=1200,
+        system=build_fallback_system_prompt(universe_name),
+        messages=messages,
+    ) as stream:
+        raw_answer = stream.get_final_message().content[0].text
+
+    answer, suggestions = parse_suggestions(raw_answer)
+
+    return AskResponse(
+        answer=answer,
+        canon_badges=[universe_name],
+        spoiler_safe=False,
+        suggestions=suggestions,
+        confidence="general",
+    )
+
+
 # --- Endpoint ---
 
 @app.post("/ask", response_model=AskResponse)
@@ -280,9 +332,20 @@ async def ask(request: AskRequest, http_request: Request) -> AskResponse:
     client_ip = http_request.client.host if http_request.client else "unknown"
     check_rate_limits(client_ip)
 
+    # Route uncurated universes to fallback mode
+    config_path = UNIVERSES_DIR / request.universe_id / "config.json"
+    if not config_path.exists():
+        return await handle_uncurated_universe(request)
+
     # Validate and load universe
     config = load_universe_config(request.universe_id)
     tier_order = get_tier_order(config)
+
+    if not request.spoiler_tier:
+        raise HTTPException(status_code=400, detail="spoiler_tier is required for curated universes.")
+    if request.canon_sources is None:
+        raise HTTPException(status_code=400, detail="canon_sources is required for curated universes.")
+
     allowed_tiers = get_allowed_tiers(request.spoiler_tier, config)
 
     # Validate canon sources
