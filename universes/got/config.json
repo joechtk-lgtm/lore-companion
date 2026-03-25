@@ -1,0 +1,131 @@
+{
+  "id": "got",
+  "display_name": "Game of Thrones",
+  "title": "Game of Thrones",
+  "type": "book_and_tv",
+  "accent_color": "#8c1a1a",
+  "spoiler_tiers": [
+    {
+      "id": "kings_landing",
+      "label": "King's Landing",
+      "description": "The game begins. Ned Stark arrives.",
+      "order": 1
+    },
+    {
+      "id": "war_of_five_kings",
+      "label": "War of Five Kings",
+      "description": "The realm fractures. Blood on every throne.",
+      "order": 2
+    },
+    {
+      "id": "red_wedding",
+      "label": "Beyond the Red Wedding",
+      "description": "The north remembers. Everything changed.",
+      "order": 3
+    },
+    {
+      "id": "dance_of_dragons",
+      "label": "Dany Arrives in Westeros",
+      "description": "Dragons come west. The final war begins.",
+      "order": 4
+    },
+    {
+      "id": "show_complete",
+      "label": "Show Complete",
+      "description": "All eight seasons watched.",
+      "order": 5
+    },
+    {
+      "id": "everything",
+      "label": "Everything",
+      "description": "All books, Fire and Blood, The World of Ice and Fire.",
+      "order": 6
+    }
+  ],
+  "canon_sources": [
+    {
+      "id": "book_asoiaf",
+      "label": "A Song of Ice and Fire (Martin)",
+      "description": "The five published novels. Primary canon.",
+      "priority": 1
+    },
+    {
+      "id": "book_fire_blood",
+      "label": "Fire & Blood",
+      "description": "History of House Targaryen. The Dance of the Dragons.",
+      "priority": 1
+    },
+    {
+      "id": "book_world_of_ice_fire",
+      "label": "The World of Ice and Fire",
+      "description": "Illustrated history. Deep worldbuilding and lore.",
+      "priority": 1
+    },
+    {
+      "id": "show_s1_4",
+      "label": "Show Seasons 1–4",
+      "description": "Largely faithful to the books with compression. Always labeled.",
+      "priority": 2
+    },
+    {
+      "id": "show_s5_8",
+      "label": "Show Seasons 5–8",
+      "description": "Diverges significantly from books. Always labeled. Not book canon.",
+      "priority": 3,
+      "always_flag_as_adaptation": true
+    }
+  ],
+  "lore_files": {
+    "characters": [
+      "ned_stark.md",
+      "tyrion_lannister.md",
+      "cersei_lannister.md",
+      "jaime_lannister.md",
+      "daenerys_targaryen.md",
+      "jon_snow.md",
+      "arya_stark.md",
+      "sansa_stark.md",
+      "bran_stark.md",
+      "tywin_lannister.md",
+      "littlefinger.md",
+      "varys.md",
+      "melisandre.md",
+      "stannis_baratheon.md",
+      "theon_greyjoy.md"
+    ],
+    "factions": [
+      "house_stark.md",
+      "house_lannister.md",
+      "house_targaryen.md",
+      "nights_watch.md",
+      "free_folk.md",
+      "faceless_men.md",
+      "white_walkers.md"
+    ],
+    "locations": [
+      "kings_landing.md",
+      "winterfell.md",
+      "the_wall.md",
+      "braavos.md",
+      "dragonstone.md"
+    ],
+    "concepts": [
+      "the_iron_throne.md",
+      "the_long_night.md",
+      "r_hllor.md",
+      "the_old_gods.md",
+      "targaryens_and_dragons.md",
+      "succession_and_legitimacy.md"
+    ],
+    "events": [
+      "roberts_rebellion.md",
+      "red_wedding.md",
+      "battle_of_the_blackwater.md",
+      "purple_wedding.md",
+      "the_dance_of_dragons.md"
+    ]
+  },
+  "voice_profile": "voice_profile.md",
+  "canon_rules": "canon_rules.md",
+  "spoiler_tiers_detail": "spoiler_tiers.md"
+}

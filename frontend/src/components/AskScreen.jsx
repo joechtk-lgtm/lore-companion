@@ -42,10 +42,10 @@ const QUOTES = {
   got: [
     { text: 'When you play the game of thrones, you win or you die.', author: 'Cersei Lannister' },
     { text: 'A mind needs books as a sword needs a whetstone.', author: 'Tyrion Lannister' },
+    { text: 'The man who passes the sentence should swing the sword.', author: 'Ned Stark' },
+    { text: "Chaos isn't a pit. Chaos is a ladder.", author: 'Petyr Baelish' },
     { text: 'The night is dark and full of terrors.', author: 'Melisandre' },
-    { text: 'Words are wind.', author: 'George R.R. Martin' },
-    { text: 'Chaos is not a pit. Chaos is a ladder.', author: 'Petyr Baelish' },
-    { text: 'Winter is coming.', author: 'House Stark' },
+    { text: 'Different roads sometimes lead to the same castle.', author: 'Jon Snow' },
   ],
 }
 

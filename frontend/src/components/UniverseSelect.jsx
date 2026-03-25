@@ -111,14 +111,15 @@ export default function UniverseSelect({
       )}
 
       {/* Universe cards */}
-      <div className="stagger-3 flex flex-col gap-3 mb-8">
-        {universeList.map(u => (
-          <UniverseCard
-            key={u.id}
-            universe={u}
-            isSelected={selectedId === u.id}
-            onClick={() => setSelectedId(u.id)}
-          />
+      <div className="stagger-3 grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+        {universeList.map((u, i) => (
+          <div key={u.id} className={universeList.length % 2 !== 0 && i === universeList.length - 1 ? 'sm:col-span-2' : ''}>
+            <UniverseCard
+              universe={u}
+              isSelected={selectedId === u.id}
+              onClick={() => setSelectedId(u.id)}
+            />
+          </div>
         ))}
       </div>
 

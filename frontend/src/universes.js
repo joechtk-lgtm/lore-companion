@@ -100,6 +100,32 @@ export const UNIVERSES = {
     defaultSources: ['book_lotr'],
     defaultTier: 'shire',
   },
+  got: {
+    id: 'got',
+    title: 'GAME OF THRONES',
+    subtitle: 'Westeros. The Iron Throne. When you play the game of thrones, you win or you die.',
+    tags: ['Books', 'Show', 'ASOIAF'],
+    accentColor: '#8c1a1a',
+    enterLabel: 'ENTER WESTEROS',
+    wakeMessage: 'Westeros stirs. First calls take a moment to answer\u00a0\u2014 the server is waking from its rest.',
+    sources: [
+      { id: 'book_asoiaf', label: 'A SONG OF ICE AND FIRE', desc: 'The five published novels. Primary canon. Where everything begins.' },
+      { id: 'book_fire_blood', label: 'FIRE & BLOOD', desc: 'History of House Targaryen. The Dance of the Dragons.' },
+      { id: 'book_world_of_ice_fire', label: 'THE WORLD OF ICE AND FIRE', desc: 'Illustrated history. Deep worldbuilding and lore.' },
+      { id: 'show_s1_4', label: 'SHOW SEASONS 1\u20134', desc: 'Largely faithful to the books with compression. Always labeled.' },
+      { id: 'show_s5_8', label: 'SHOW SEASONS 5\u20138', desc: 'Diverges from books. Always labeled. Not book canon.' },
+    ],
+    tiers: [
+      { id: 'kings_landing', label: "KING'S LANDING", desc: "The game begins. Ned Stark arrives." },
+      { id: 'war_of_five_kings', label: 'WAR OF FIVE KINGS', desc: 'The realm fractures. Blood on every throne.' },
+      { id: 'red_wedding', label: 'BEYOND THE RED WEDDING', desc: 'The north remembers. Everything changed.' },
+      { id: 'dance_of_dragons', label: 'DANY ARRIVES IN WESTEROS', desc: 'Dragons come west. The final war begins.' },
+      { id: 'show_complete', label: 'SHOW COMPLETE', desc: 'All eight seasons watched.' },
+      { id: 'everything', label: 'EVERYTHING', desc: 'All books, Fire and Blood, The World of Ice and Fire.' },
+    ],
+    defaultSources: ['book_asoiaf', 'show_s1_4'],
+    defaultTier: 'war_of_five_kings',
+  },
 }
 
 export function getTierLabel(universe, tierId) {
