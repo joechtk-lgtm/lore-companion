@@ -105,7 +105,7 @@ export const UNIVERSES = {
     title: 'GAME OF THRONES',
     subtitle: 'Westeros. The Iron Throne. When you play the game of thrones, you win or you die.',
     tags: ['Books', 'Show', 'ASOIAF'],
-    accentColor: '#8c1a1a',
+    accentColor: '#c0392b',
     enterLabel: 'ENTER WESTEROS',
     wakeMessage: 'Westeros stirs. First calls take a moment to answer\u00a0\u2014 the server is waking from its rest.',
     sources: [

@@ -3,7 +3,7 @@
   "display_name": "Game of Thrones",
   "title": "Game of Thrones",
   "type": "book_and_tv",
-  "accent_color": "#8c1a1a",
+  "accent_color": "#c0392b",
   "spoiler_tiers": [
     {
       "id": "kings_landing",

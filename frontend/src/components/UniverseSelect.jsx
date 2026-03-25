@@ -14,7 +14,7 @@ function UniverseCard({ universe, isSelected, onClick }) {
   return (
     <button
       onClick={onClick}
-      className={`text-left rounded-[14px] p-4 border transition-all duration-200 w-full
+      className={`text-left rounded-[14px] p-5 border transition-all duration-200 w-full
         ${isSelected
           ? 'bg-[#16130a] border-current'
           : 'bg-[#111009] border-[#2e2614]'
@@ -111,15 +111,14 @@ export default function UniverseSelect({
       )}
 
       {/* Universe cards */}
-      <div className="stagger-3 grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-        {universeList.map((u, i) => (
-          <div key={u.id} className={universeList.length % 2 !== 0 && i === universeList.length - 1 ? 'sm:col-span-2' : ''}>
-            <UniverseCard
-              universe={u}
-              isSelected={selectedId === u.id}
-              onClick={() => setSelectedId(u.id)}
-            />
-          </div>
+      <div className="stagger-3 flex flex-col gap-3 mb-8">
+        {universeList.map(u => (
+          <UniverseCard
+            key={u.id}
+            universe={u}
+            isSelected={selectedId === u.id}
+            onClick={() => setSelectedId(u.id)}
+          />
         ))}
       </div>
 
