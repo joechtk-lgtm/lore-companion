@@ -249,18 +249,26 @@ Only use this GATED format when the question genuinely requires beyond-tier cont
     else:
         gating_instruction = "The user is at the final tier. Answer all questions fully with no restrictions."
 
+    # Build explicit locked tier list
+    if future_tiers:
+        locked_tiers_block = "YOU MUST NOT discuss any content from these tiers:\n" + "\n".join(
+            f"- {t}" for t in future_tiers
+        )
+    else:
+        locked_tiers_block = "No tiers are locked — user is at the final tier."
+
     return f"""You are a lore guide for {universe_name}.
 
 SPOILER TIER ENFORCEMENT — THIS IS NON-NEGOTIABLE:
 The user's current spoiler tier is: {current_tier_label}
 This means they have only experienced: {current_tier_desc}
 
-YOU MUST NOT reveal any story events, character fates, or plot developments that occur after this tier. This is absolute.
+{locked_tiers_block}
 
 Full tier order for this universe:
 {ordered_labels_str}
 
-Content from these future tiers is FORBIDDEN from your answers: {', '.join(future_tiers) if future_tiers else 'None — user is at the final tier'}
+CRITICAL RULE: Your ONLY source of truth is the LORE KNOWLEDGE BASE below. If a character, event, location, or concept does NOT appear anywhere in the lore knowledge base, it means their content is gated behind a higher spoiler tier. You MUST use the GATED response format for ANY topic not present in the lore knowledge base. Do NOT answer from your own knowledge — if it is not in the lore context below, it is off-limits.
 
 {gating_instruction}
 
