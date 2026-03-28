@@ -35,7 +35,6 @@ const POPULAR_UNIVERSES = [
   { name: "Foundation", type: "Book & TV" },
   { name: "Mistborn", type: "Book" },
   { name: "Stormlight Archive", type: "Book" },
-  { name: "Star Wars", type: "Film & TV" },
   { name: "Marvel Cinematic Universe", type: "Film & TV" },
   { name: "The Matrix", type: "Film" },
   { name: "Blade Runner", type: "Film" },
@@ -111,6 +110,18 @@ const UNIVERSE_ICONS = {
       <rect x="13" y="3" width="6" height="18" fill={color}/>
       {/* Right prong */}
       <rect x="22" y="8" width="6" height="13" fill={color}/>
+    </svg>
+  ),
+  starwars: (color) => (
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+      {/* Blade */}
+      <rect x="15" y="0" width="3" height="18" rx="1" fill={color}/>
+      {/* Guard */}
+      <rect x="12" y="18" width="9" height="3" fill={`${color}88`}/>
+      {/* Hilt */}
+      <rect x="14" y="21" width="5" height="8" fill={`${color}66`}/>
+      {/* Pommel */}
+      <rect x="15" y="29" width="3" height="3" fill={`${color}88`}/>
     </svg>
   ),
 }

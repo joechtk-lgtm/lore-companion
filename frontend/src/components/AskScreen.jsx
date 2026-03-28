@@ -47,6 +47,16 @@ const QUOTES = {
     { text: 'The night is dark and full of terrors.', author: 'Melisandre' },
     { text: 'Different roads sometimes lead to the same castle.', author: 'Jon Snow' },
   ],
+  starwars: [
+    { text: 'May the Force be with you.', author: 'Star Wars' },
+    { text: 'I am your father.', author: 'Darth Vader' },
+    { text: 'Do. Or do not. There is no try.', author: 'Yoda' },
+    { text: 'The Force will be with you. Always.', author: 'Obi-Wan Kenobi' },
+    { text: "In my experience, there's no such thing as luck.", author: 'Obi-Wan Kenobi' },
+    { text: 'Your focus determines your reality.', author: 'Qui-Gon Jinn' },
+    { text: 'The belonging you seek is not behind you. It is ahead.', author: 'Maz Kanata' },
+    { text: 'This is the Way.', author: 'Din Djarin' },
+  ],
 }
 
 function Diamond({ color = '#c9a84c' }) {

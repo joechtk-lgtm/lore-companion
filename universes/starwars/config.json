@@ -1,0 +1,245 @@
+{
+  "universe_id": "starwars",
+  "display_name": "Star Wars",
+  "id": "starwars",
+  "title": "Star Wars",
+  "type": "film_and_tv",
+  "accent_color": "#4a6fa5",
+  "spoiler_tiers": [
+    {
+      "id": "original_trilogy",
+      "label": "The Original Trilogy",
+      "description": "Episodes IV, V, VI. A New Hope through Return of the Jedi.",
+      "order": 1
+    },
+    {
+      "id": "prequel_trilogy",
+      "label": "The Prequel Trilogy",
+      "description": "All six saga films. The fall of Anakin Skywalker.",
+      "order": 2
+    },
+    {
+      "id": "clone_wars_era",
+      "label": "The Clone Wars Era",
+      "description": "Films + Clone Wars complete. Order 66 from every angle.",
+      "order": 3,
+      "default": true
+    },
+    {
+      "id": "rebellion_era",
+      "label": "The Rebellion Era",
+      "description": "Rebels, Andor, Rogue One. The spark that lit the fire.",
+      "order": 4
+    },
+    {
+      "id": "new_republic_era",
+      "label": "The New Republic Era",
+      "description": "Mandalorian, Ahsoka. After the Empire falls.",
+      "order": 5
+    },
+    {
+      "id": "sequel_trilogy",
+      "label": "The Sequel Trilogy",
+      "description": "All nine saga films. The rise and fall of the First Order.",
+      "order": 6
+    },
+    {
+      "id": "everything",
+      "label": "Everything",
+      "description": "All canon sources. No limits.",
+      "order": 7
+    }
+  ],
+  "canon_sources": [
+    {
+      "id": "film_original_trilogy",
+      "label": "Original Trilogy",
+      "description": "Episodes IV, V, VI. The foundation.",
+      "priority": 1
+    },
+    {
+      "id": "film_prequel_trilogy",
+      "label": "Prequel Trilogy",
+      "description": "Episodes I, II, III. The fall of the Republic.",
+      "priority": 1
+    },
+    {
+      "id": "film_sequel_trilogy",
+      "label": "Sequel Trilogy",
+      "description": "Episodes VII, VIII, IX. A new generation.",
+      "priority": 1
+    },
+    {
+      "id": "film_anthology",
+      "label": "Anthology Films",
+      "description": "Rogue One, Solo. Stories between the saga.",
+      "priority": 1
+    },
+    {
+      "id": "tv_clone_wars",
+      "label": "The Clone Wars",
+      "description": "7 seasons. The war between trilogies.",
+      "priority": 1
+    },
+    {
+      "id": "tv_rebels",
+      "label": "Rebels",
+      "description": "Bridges Clone Wars to the original trilogy.",
+      "priority": 1
+    },
+    {
+      "id": "tv_mandalorian",
+      "label": "The Mandalorian",
+      "description": "After the Empire falls. Grogu. Din Djarin.",
+      "priority": 1
+    },
+    {
+      "id": "tv_andor",
+      "label": "Andor",
+      "description": "The making of a rebel. Before Rogue One.",
+      "priority": 1
+    },
+    {
+      "id": "legends_kotor",
+      "label": "Knights of the Old Republic",
+      "description": "KOTOR I + II. 4,000 years before the saga.",
+      "priority": 2
+    },
+    {
+      "id": "legends_eu_novels",
+      "label": "Expanded Universe novels",
+      "description": "Thrawn trilogy, New Jedi Order, and more.",
+      "priority": 2
+    }
+  ],
+  "source_groups": [
+    {
+      "label": "FILMS",
+      "sources": [
+        {
+          "id": "film_original_trilogy",
+          "label": "Original Trilogy",
+          "description": "Episodes IV, V, VI. The foundation.",
+          "default": true
+        },
+        {
+          "id": "film_prequel_trilogy",
+          "label": "Prequel Trilogy",
+          "description": "Episodes I, II, III. The fall of the Republic.",
+          "default": true
+        },
+        {
+          "id": "film_sequel_trilogy",
+          "label": "Sequel Trilogy",
+          "description": "Episodes VII, VIII, IX. A new generation.",
+          "default": false
+        },
+        {
+          "id": "film_anthology",
+          "label": "Anthology Films",
+          "description": "Rogue One, Solo. Stories between the saga.",
+          "default": false
+        }
+      ]
+    },
+    {
+      "label": "TV SERIES",
+      "sources": [
+        {
+          "id": "tv_clone_wars",
+          "label": "The Clone Wars",
+          "description": "7 seasons. The war between trilogies.",
+          "default": true
+        },
+        {
+          "id": "tv_rebels",
+          "label": "Rebels",
+          "description": "Bridges Clone Wars to the original trilogy.",
+          "default": false
+        },
+        {
+          "id": "tv_mandalorian",
+          "label": "The Mandalorian",
+          "description": "After the Empire falls. Grogu. Din Djarin.",
+          "default": false
+        },
+        {
+          "id": "tv_andor",
+          "label": "Andor",
+          "description": "The making of a rebel. Before Rogue One.",
+          "default": false
+        }
+      ]
+    },
+    {
+      "label": "LEGENDS \u2014 NON-CANON",
+      "collapsed": true,
+      "warning": "Declared non-canon in 2014. Always labeled separately, never mixed with Disney canon.",
+      "sources": [
+        {
+          "id": "legends_kotor",
+          "label": "Knights of the Old Republic",
+          "description": "KOTOR I + II. 4,000 years before the saga.",
+          "default": false
+        },
+        {
+          "id": "legends_eu_novels",
+          "label": "Expanded Universe novels",
+          "description": "Thrawn trilogy, New Jedi Order, and more.",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "lore_files": {
+    "characters": [
+      "anakin_skywalker.md",
+      "luke_skywalker.md",
+      "leia_organa.md",
+      "obi_wan_kenobi.md",
+      "palpatine.md",
+      "yoda.md",
+      "darth_vader.md",
+      "han_solo.md",
+      "ahsoka_tano.md",
+      "din_djarin.md",
+      "grogu.md",
+      "rey.md",
+      "kylo_ren.md",
+      "revan.md"
+    ],
+    "factions": [
+      "jedi_order.md",
+      "sith.md",
+      "galactic_empire.md",
+      "rebel_alliance.md",
+      "mandalorians.md",
+      "first_order.md"
+    ],
+    "locations": [
+      "tatooine.md",
+      "coruscant.md",
+      "dagobah.md",
+      "mandalore.md",
+      "mustafar.md"
+    ],
+    "concepts": [
+      "the_force.md",
+      "lightsabers.md",
+      "the_rule_of_two.md",
+      "order_66.md",
+      "the_chosen_one_prophecy.md",
+      "mandalorian_culture.md"
+    ],
+    "events": [
+      "fall_of_the_republic.md",
+      "battle_of_yavin.md",
+      "battle_of_endor.md",
+      "the_great_purge.md",
+      "battle_of_geonosis.md"
+    ]
+  },
+  "voice_profile": "voice_profile.md",
+  "canon_rules": "canon_rules.md",
+  "spoiler_tiers_detail": "spoiler_tiers.md"
+}

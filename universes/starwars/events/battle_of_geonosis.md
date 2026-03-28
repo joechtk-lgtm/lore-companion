@@ -1,0 +1,22 @@
+# Battle of Geonosis
+
+## Overview
+
+The Battle of Geonosis was the first engagement of the Clone Wars — the moment the galaxy's largest conflict in a millennium began. What started as a rescue mission for Obi-Wan Kenobi in a Geonosian arena became the first deployment of the Republic's clone army and the end of the Jedi Order's role as peacekeepers. After Geonosis, they were generals. The path to Order 66 began in that red dust.
+
+## Key Events
+
+[spoiler_tier: prequel_trilogy]
+- **Obi-Wan's discovery:** Obi-Wan Kenobi tracked bounty hunter Jango Fett to Geonosis, a ringed desert world of insectoid Geonosians. There he discovered a meeting of Separatist leaders — Count Dooku, Nute Gunray, Poggle the Lesser, Wat Tambor, and others — planning the Confederacy of Independent Systems. He also discovered that the Separatists were building a massive droid army. Obi-Wan transmitted the intelligence to the Jedi Council before being captured. [film_pt]
+- **The arena:** Obi-Wan, Anakin, and Padme were sentenced to execution in the Petranaki arena — a gladiatorial pit where they were chained to pillars and set upon by a nexu, a reek, and an acklay. They fought back, improvising weapons and freeing themselves, but were surrounded by Geonosian guards and battle droids. [film_pt]
+- **The Jedi rescue:** Mace Windu led approximately two hundred Jedi Knights into the arena in a surprise rescue. For a brief, extraordinary moment, the full military power of the Jedi Order was unleashed — lightsabers deflecting blaster bolts, Force powers scattering droids, Jedi fighting side by side in open battle for the first time in living memory. It was glorious and doomed. The droid army was too vast. Jedi began falling. [film_pt]
+- **Mace Windu and Jango Fett:** During the arena battle, Mace Windu confronted and killed Jango Fett — beheading the bounty hunter in front of his young son, Boba Fett. This moment planted the seed of Boba Fett's lifelong hatred of the Jedi and set him on the path to becoming the galaxy's most feared bounty hunter. [film_pt]
+- **The clone army arrives:** As the surviving Jedi were cornered and facing annihilation, Master Yoda arrived with the newly deployed Grand Army of the Republic — hundreds of thousands of clone troopers in gunships and walkers. The clones stormed the arena and the surrounding Geonosian hive complexes, engaging the Separatist droid army in large-scale mechanized warfare. It was the first time the Republic had fielded a military force in a thousand years. [film_pt]
+- **The full battle:** The engagement expanded beyond the arena into the desert plains of Geonosis. Republic walkers (AT-TEs) fought Geonosian fighters and Separatist ground forces. Clone troopers assaulted droid foundries. The scale was unprecedented — and it was only the beginning. The Separatist leadership escaped, the droid army retreated to regroup, and the Clone Wars had officially begun. [film_pt]
+- **Dooku's escape and the duel:** Count Dooku attempted to flee with the Death Star plans (early schematics for the battle station that would not be completed for two decades). Obi-Wan and Anakin pursued him into a hangar and dueled him. Dooku defeated both — severing Anakin's right arm and wounding Obi-Wan. Yoda arrived and fought Dooku directly, lightsaber against lightsaber, master against former student. Dooku escaped by threatening to collapse the hangar on the injured Jedi, forcing Yoda to save them instead of pursuing. [film_pt]
+
+[spoiler_tier: clone_wars_era]
+- **Second Battle of Geonosis:** The Republic returned to Geonosis later in the Clone Wars when it was discovered that Poggle the Lesser had rebuilt the droid foundries. Anakin, Ahsoka, Ki-Adi-Mundi, and Obi-Wan led a massive assault. The Second Battle was even bloodier than the first, with significant clone casualties during the landing and the underground assault on the foundry. Ahsoka and Barriss Offee destroyed the primary foundry from within. [tv_tcw]
+
+[spoiler_tier: everything]
+- **Significance:** Geonosis was where the Jedi crossed a line they could not uncross. They became military commanders, leading an army of cloned soldiers they did not create and did not fully understand, in a war engineered by the Sith. Every Jedi who ignited a lightsaber in that arena became a target for Order 66. The trap was not sprung at Geonosis — it was set there. The Jedi walked in willingly, because they had no other choice that they could see. [film_pt] [tv_tcw]

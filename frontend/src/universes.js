@@ -130,6 +130,67 @@ export const UNIVERSES = {
     defaultSources: ['book_asoiaf', 'show_got_s1_4'],
     defaultTier: 'war_of_five_kings',
   },
+  starwars: {
+    id: 'starwars',
+    title: 'STAR WARS',
+    subtitle: 'A galaxy far, far away. The Force, the Empire, and the story of the Skywalkers.',
+    tags: ['Films', 'The Clone Wars', 'Mandalorian'],
+    accentColor: '#4a6fa5',
+    enterLabel: 'ENTER THE GALAXY',
+    wakeMessage: 'The galaxy stirs. First calls take a moment to answer\u00a0\u2014 the server is waking from its rest.',
+    sources: [
+      { id: 'film_original_trilogy', label: 'ORIGINAL TRILOGY', desc: 'Episodes IV, V, VI. The foundation.' },
+      { id: 'film_prequel_trilogy', label: 'PREQUEL TRILOGY', desc: 'Episodes I, II, III. The fall of the Republic.' },
+      { id: 'film_sequel_trilogy', label: 'SEQUEL TRILOGY', desc: 'Episodes VII, VIII, IX. A new generation.' },
+      { id: 'film_anthology', label: 'ANTHOLOGY FILMS', desc: 'Rogue One, Solo. Stories between the saga.' },
+      { id: 'tv_clone_wars', label: 'THE CLONE WARS', desc: '7 seasons. The war between trilogies.' },
+      { id: 'tv_rebels', label: 'REBELS', desc: 'Bridges Clone Wars to the original trilogy.' },
+      { id: 'tv_mandalorian', label: 'THE MANDALORIAN', desc: 'After the Empire falls. Grogu. Din Djarin.' },
+      { id: 'tv_andor', label: 'ANDOR', desc: 'The making of a rebel. Before Rogue One.' },
+      { id: 'legends_kotor', label: 'KNIGHTS OF THE OLD REPUBLIC', desc: 'KOTOR I + II. 4,000 years before the saga.' },
+      { id: 'legends_eu_novels', label: 'EXPANDED UNIVERSE NOVELS', desc: 'Thrawn trilogy, New Jedi Order, and more.' },
+    ],
+    sourceGroups: [
+      {
+        label: 'FILMS',
+        sources: [
+          { id: 'film_original_trilogy', label: 'ORIGINAL TRILOGY', desc: 'Episodes IV, V, VI. The foundation.', default: true },
+          { id: 'film_prequel_trilogy', label: 'PREQUEL TRILOGY', desc: 'Episodes I, II, III. The fall of the Republic.', default: true },
+          { id: 'film_sequel_trilogy', label: 'SEQUEL TRILOGY', desc: 'Episodes VII, VIII, IX. A new generation.', default: false },
+          { id: 'film_anthology', label: 'ANTHOLOGY FILMS', desc: 'Rogue One, Solo. Stories between the saga.', default: false },
+        ],
+      },
+      {
+        label: 'TV SERIES',
+        sources: [
+          { id: 'tv_clone_wars', label: 'THE CLONE WARS', desc: '7 seasons. The war between trilogies.', default: true },
+          { id: 'tv_rebels', label: 'REBELS', desc: 'Bridges Clone Wars to the original trilogy.', default: false },
+          { id: 'tv_mandalorian', label: 'THE MANDALORIAN', desc: 'After the Empire falls. Grogu. Din Djarin.', default: false },
+          { id: 'tv_andor', label: 'ANDOR', desc: 'The making of a rebel. Before Rogue One.', default: false },
+        ],
+      },
+      {
+        label: 'LEGENDS \u2014 NON-CANON',
+        collapsed: true,
+        warning: 'Declared non-canon in 2014. Always labeled separately, never mixed with Disney canon.',
+        sources: [
+          { id: 'legends_kotor', label: 'KNIGHTS OF THE OLD REPUBLIC', desc: 'KOTOR I + II. 4,000 years before the saga.', default: false },
+          { id: 'legends_eu_novels', label: 'EXPANDED UNIVERSE NOVELS', desc: 'Thrawn trilogy, New Jedi Order, and more.', default: false },
+        ],
+      },
+    ],
+    tiers: [
+      { id: 'original_trilogy', label: 'THE ORIGINAL TRILOGY', desc: 'Episodes IV, V, VI. A New Hope through Return of the Jedi.' },
+      { id: 'prequel_trilogy', label: 'THE PREQUEL TRILOGY', desc: 'All six saga films. The fall of Anakin Skywalker.' },
+      { id: 'clone_wars_era', label: 'THE CLONE WARS ERA', desc: 'Films + Clone Wars complete. Order 66 from every angle.' },
+      { id: 'rebellion_era', label: 'THE REBELLION ERA', desc: 'Rebels, Andor, Rogue One. The spark that lit the fire.' },
+      { id: 'new_republic_era', label: 'THE NEW REPUBLIC ERA', desc: 'Mandalorian, Ahsoka. After the Empire falls.' },
+      { id: 'sequel_trilogy', label: 'THE SEQUEL TRILOGY', desc: 'All nine saga films. The rise and fall of the First Order.' },
+      { id: 'everything', label: 'EVERYTHING', desc: 'All canon sources. No limits.' },
+    ],
+    defaultSources: ['film_original_trilogy', 'film_prequel_trilogy', 'tv_clone_wars'],
+    defaultTier: 'clone_wars_era',
+  },
 }
 
 export function getTierLabel(universe, tierId) {
