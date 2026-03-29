@@ -109,9 +109,3 @@ lore-companion/
     ├── got/
     └── starwars/
 ```
-
----
-
-## License
-
-MIT
